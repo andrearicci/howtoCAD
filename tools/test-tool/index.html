@@ -1,0 +1,302 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+<link rel="stylesheet" href="../../static/normalize.css">
+<link rel="stylesheet" href="../../static/skeleton.css"> -->
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+<!-- CSS Reset -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+<!-- Milligram CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+<!-- You should properly set the path from the main file. -->
+<link rel="stylesheet" href="../../static/style.css">
+<title>ARsurvey  — HowtoCAD</title>
+<body  id="test-tool"  class="test-tool  container tool">
+
+<!-- HAmburger responsive menu https://codepen.io/alvarotrigo/pen/MWEJEWG -->
+<nav class="top-nav">
+  <div>
+    <h1 class="logo"><a href="../../" title="Home">HowtoCAD</a></h1>
+  </div>
+  <input id="menu-toggle" type="checkbox" />
+  <label class='menu-button-container' for="menu-toggle">
+  <div class='menu-button'></div>
+</label>
+  <ul class="menu">
+    
+      <li ><a href="../../blog/">Blog</a></li>
+    
+      <li ><a href="../../variables/">Variables</a></li>
+    
+      <li  class="active"><a href="../">Tools</a></li>
+    
+  </ul>
+</nav>
+
+<!-- -END- HAmburger responsive menu -->
+
+<!--     <nav>
+      <ul class="nav navbar-nav row">
+        
+          <li class="column  column-10" ><a href="../../blog/">Blog</a></li>
+        
+          <li class="column  column-10" ><a href="../../variables/">variables</a></li>
+        
+          <li class="column  column-10" ><a href="../../projects">Projects</a></li>
+        
+      </ul>
+    </nav> -->
+  <main>
+    
+
+<!-- https://www.getlektor.com/docs/templates/navigation/ -->
+
+<hgroup>
+  
+  <h1>ARsurvey</h1>
+</hgroup>
+<!--https://stackoverflow.com/questions/46021761/lektor-checkboxes-u-ouput-error/48706156#48706156-->
+
+
+<article class="description">
+  <p><p>Draws a triangle given three sides, insertion point and alignement. Intended to help in the boring survey procedure.</p>
+</p>
+  
+     <p>command: <em>srv</em></p>
+  
+  <pre><code><p>;;; <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>
+;;; ARsurvey v0.1.0 © 2009 Andrea Ricci <a href="http://andrearicci.it">http://andrearicci.it</a>  &lt;°)));
+;;;
+;;; IT
+;;; tentativo 01 di creare una routine per semplificare l'immissioni di triangolazioni di rilievo
+;;; il prodotto finale dovrebbe, date tre misure, verso, punto di inserimento e allineamento,
+;;; tracciare un triangolo delle misure date nel punto e con l'allineamento dato
+;;;
+;;; si rilascia con licenza LGPL v3.0 <a href="http://www.opensource.org/licenses/lgpl-3.0.html">http://www.opensource.org/licenses/lgpl-3.0.html</a>
+;;; per cui, fra l'altro, non è possibile ricavarne un prodotto commerciale, e qualsiasi
+;;; derivato (modifiche, incorporamenti in altro codice) deve avere la medesima licenza
+;;;
+;;; EN
+;;; draws a triangle given three sides, insertion point and alignement,
+;;; intended to help in the boring survey procedure
+;;; relased under the LGPL licence v3.0 <a href="http://www.opensource.org/licenses/lgpl-3.0.html">http://www.opensource.org/licenses/lgpl-3.0.html</a>
+;;; <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p>
+<p>;;; IT
+;;; uso:
+;;; avviare il programma digitando "srv" (da SuRVey).
+;;; Il programma chiede anzitutto tre misure (si può inserirle con mouse),
+;;; poi punto d'inserimento e direzione, infine chiede se il triangolo vada
+;;; tracciato in senso antiorario (default, basta dare l'invio)
+;;; oppure orario (premere C per "clockwise")
+;;;
+;;; EN
+;;; use:
+;;; start the command with "srv" (as in SuRVey)
+;;; The routine will ask you for three sides' measures (you can input them by mouse),
+;;; then the insertion point, and the direction. Lastly it will ask you if you want
+;;; to draw it counterclockwise (default, just press "enter") or Clockwise (press "C")</p>
+<p>;; cazzeggio bell'e buono
+(defun signature ()
+  (princ
+    "\n   <strong>    <em>  </em>  __</strong>  <strong><strong>  </strong></strong>    <strong>    __</strong>  <strong>_<em>  </em></strong>  <strong>_  __</strong>
+\r  /<strong>\  ( \( )(  <em> \(  </em> \( _</strong>)  /<strong>\  (  <em> \(</em>  _)/ </strong>)/ <strong>)(<em>  </em>)
+\r /(</strong>)\  )  (  )(<em>) ))   / )<strong>)  /(</strong>)\  )   / </em>)(<em>( (<strong>( (</strong>  </em>)(<em> 
+\r(<strong>)(</strong>)(</em>)\<em>)(<em>__</em>/(</em>)\<em>)(<strong>__)(</strong>)(__)(</em>)\<em>)(<strong>__)\</strong></em>)\<strong>_)(__</strong>)"
+  )
+)</p>
+<p>;;per convertire radianti in gradi
+(defun rad2grad (radianti / gradi)
+  (setq gradi (<em> radianti (/ 180 pi)))
+  gradi
+)
+;; per convertire gradi in radianti
+(defun grad2rad (gradi / radianti)
+  (setq radianti (</em> gradi (/ pi 180)))
+  radianti
+)
+;; dati tre lati ricava angoli interni (formule di Briggs - <a href="http://www.math.it/formulario/goniometria.htm">http://www.math.it/formulario/goniometria.htm</a>)
+(defun briggs
+          (latoadiacente1 latoadiacente2 latoopposto / corner)
+  (setq corner              ; angolo opposto al lato sideC
+     (abs
+       (<em>
+         (atan
+           (sqrt
+         (/
+           (</em>
+             (- p latoadiacente1)
+             (- p latoadiacente2)
+           )            ;fine_numeratore
+           (* p
+              (- p latoopposto)
+           )            ;fine_denominatore
+         ) ;_end frazione
+           ) ;_end radice quadrata
+         ) ;_end reciproco tangente
+         2
+       ) ;_end moltiplica per 2
+     ) ;_end abs (rimuove eventuale "-")
+  )
+  corner
+) ;_end funzione briggs</p>
+<p>;;; inizio main function
+(defun c:srv ()             ; mnemonico da SuRVey
+  (signature);_he he he
+  (princ
+    "\nCommand SRV (SuRVey) v0.1.0 © 2009 Andrea Ricci <a href="http://andrearicci.it">http://andrearicci.it</a>  <em>m__(*</em>°)<strong>ooo__</strong>"
+  )
+;(setq lprecision (getvar "luprec"))    ; memorizza la precisione lineare in uso per successivo ripristino
+;(setvar "luprec" 8)
+;(setq aprecision (getvar "auprec"))    ; memorizza la precisione angolare in uso per successivo ripristino
+;(setvar "auprec" 8)
+(initget 103)               ; non consente valore nullo (+1), zero (+2), negativo (+4), usa linea tratteggiata (+32), ignora Z (+64).
+(setq sideA
+       (getdist "\nfirst side lenght: ")
+)
+(initget 103)
+(setq sideB
+       (getdist "\nSecond side lenght: ")
+)
+(initget 103)
+(setq sideC
+       (getdist "\nThird side lenght: ")
+)
+  ;; controllo che sia un triangolo (la somma dei lati minori supera il lato maggiore?)
+  ;; is the triangle possible?
+  (if
+    (or (&gt;
+      (max sideA sideB sideC)
+      (- (+ sideA sideB sideC) (max sideA sideB sideC))
+    ) ;_"&gt;" valuta se un valore è maggiore dell'elemento alla sua destra
+    (=
+      (max sideA sideB sideC)
+      (- (+ sideA sideB sideC) (max sideA sideB sideC))
+    ) ;_oppure uguale
+    ) ;_end or
+     (progn
+       (alert "sorry, not a triangle")
+       ;;(setvar "luprec" lprecision) ;_resetta la precisione lineare originale
+       ;;(setvar "auprec" aprecision) ;_resetta la precisione angolare originale
+       (gc)
+       (princ)
+       (exit)
+     ) ;_end progn
+  ) ;_endif</p>
+<p>(initget 65)              ;non consente valore nullo (+1), zero (+2), negativo (+4), usa linea tratteggiata (+32), ignora Z (+64).
+  (setq pointA              ;origine triangolo
+     (getpoint "\nInsertion Point: ")
+  )
+  (initget 103)
+  ;; angolo iniziale
+  (setq delta
+     (angle pointA
+        (getpoint (princ pointA) "\nFirst side direction")
+                    ; (princ pointA) all'interno di getpoint serve a piazzare l'origine della linea tratteggiata
+     )
+  )
+  (princ (strcat " [angle= " (rtos (rad2grad delta) 2 8)"]"))</p>
+<p>(setq p (/ (+ sideA sideB sideC) 2))  ; p= semiperimetro</p>
+<p>;; angoli ottenuti con briggs' formula
+  ;; (setq alpha (briggs sidec sideb sidea))
+  ;; (setq beta (briggs sidea sidec sideb))
+  (setq gamma (briggs sidea sideb sidec))
+  (setq gamma (- pi gamma)) ;_correzione dell'angolo reciproco <strong><strong><strong><strong><strong><strong><strong><strong><strong><em>**</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></p>
+<p>;; correzione del verso di tracciamento (default: antiorario) <a href="http://www.lee-mac.com/promptwithdefault.html">http://www.lee-mac.com/promptwithdefault.html</a>
+  (initget "Cw or ccW")
+  (setq dir
+     (getkword
+       "\nSpecify order of given measures [Cw/ccW (clockwise/counterclockwise)]: <ccW>"
+     )
+  )
+  (if (= dir "Cw")
+    (setq verso -1)
+    (progn
+      (setq dir "ccW")
+      (setq verso 1) ;_else
+    ) ;_end progn
+  ) ;_end if
+  (princ dir)
+  (setq dir nil) ;_resetting the variable for next use
+  ;; end of triangle direction routine</p>
+<p>;; punto B in coordinate relative da pointA e radianti
+  (setq pointB
+     (strcat "@"
+         (rtos sideA 2 8)
+         "&lt;"
+         (rtos delta 2 8)
+         "r"
+     )
+  )
+  ;; punto C in coordinate relative da pointB e radianti
+  (setq pointC (strcat "@"
+               (rtos sideB 2 8)
+               "&lt;"
+               (rtos (+ delta (* verso gamma)) 2 8);_corretion by direction-&gt;verso
+               "r"
+           )
+  )</p>
+<p>;; disegno della polilinea
+  (setq snapmode (getvar "osmode"))
+  (setvar "osmode" 0)
+  (command "_.PLINE" pointA pointB pointC "_close")
+  (setvar "osmode" snapmode)
+  ;;
+  ;(setvar "luprec" lprecision) ;_resetta la precisione lineare originale
+  ;(setvar "auprec" aprecision) ;_resetta la precisione angolare originale</p>
+<p>;; stampa le tre lunghezze
+  (princ (strcat "\n1st side= "
+         (rtos sideA 2 8)
+         "; 2nd side= "
+         (rtos sideB 2 8)
+         "; 3rd side= "
+         (rtos sideC 2 8)
+     )
+  )
+  ;| per verifica stampo l'ultimo lato calcolato, corrisponde con il terzo inserito?
+     verify: is the calculated last side equal to imput?|;
+  (princ (strcat " [Last side: "
+         (rtos (distance (getvar "LASTPOINT") pointa) 2 8)
+         "]"
+     )
+  )
+) ;_end<em>defun
+;;;
+;;; ------------ Command Line Load Sequence--------------------------------------------
+(princ "\nARsurvey v0.1.0 \n© Andrea Ricci, \n July, 2009....loaded.")
+(princ
+  "\nARsurvey v0.1.0
+\r©  __    </em>  <em>  <strong><strong>  </strong></strong>  <strong>__    </strong>    <strong><strong>  </strong></strong>  __</em>  <strong>_  __</strong>
+\r  /<strong>\  ( \( )(  <em> \(  </em> \( _</strong>)  /<strong>\  (  <em> \(</em>  _)/ </strong>)/ <strong>)(<em>  </em>)
+\r /(</strong>)\  )  (  )(<em>) ))   / )<strong>)  /(</strong>)\  )   / </em>)(<em>( (<strong>( (</strong>  </em>)(<em> 
+\r(<strong>)(</strong>)(</em>)\<em>)(<em>__</em>/(</em>)\<em>)(<strong>__)(</strong>)(__)(</em>)\<em>)(<strong>__)\</strong></em>)\<strong>_)(__</strong>)
+       \n<a href="http://andrearicci.it">http://andrearicci.it</a> July, 2009....loaded."
+)
+(princ "Type \"SRV\" (SuRVey) to draw a triangle given tree sides, insertion point and alignment")
+(print)
+;;;;;;</p>
+<p>;;;---------------------------------------------------------------------------;;;
+;;; NOTES
+;;; 
+;;; trigonometria: <a href="http://discussion.autodesk.com/forums/message.jspa?messageID=6159454">http://discussion.autodesk.com/forums/message.jspa?messageID=6159454</a>
+;;;
+;;; <a href="http://it.wikipedia.org/wiki/Formule_di_Briggs">http://it.wikipedia.org/wiki/Formule_di_Briggs</a>
+;;;
+;;;---------------------------------------------------------------------------;;;</p>
+</code></pre>
+</article>
+
+
+  </main>
+  <footer>
+    <ul class="row">
+   <li class="column"> &copy; Copyright 2022 by <a href="https://andrearicci.it">Andrea Ricci</a>.</li>
+   <li class="column"><a href="https://github.com/andrearicci"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+  </svg></a>.</li>
+   <!-- <li class="column">| <a href="../../blog@atom/main">Atom Feed</a>.</li> -->
+ </ul> </footer>
+</body>
