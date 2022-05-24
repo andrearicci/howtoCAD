@@ -1,6 +1,9 @@
 <!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!-- <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
 <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
 <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
@@ -14,7 +17,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 <!-- You should properly set the path from the main file. -->
 <link rel="stylesheet" href="../../static/style.css">
-<title>Stair  — HowtoCAD</title>
+<title>Units in the taskbar  — HowtoCAD</title>
+</head>
 <body  id="stair"  class="stair  container tool">
 
 <!-- HAmburger responsive menu https://codepen.io/alvarotrigo/pen/MWEJEWG -->
@@ -57,16 +61,19 @@
 
 <hgroup>
   
-  <h1>Stair</h1>
+  <h1>Units in the taskbar</h1>
 </hgroup>
 <!--https://stackoverflow.com/questions/46021761/lektor-checkboxes-u-ouput-error/48706156#48706156-->
 
 
 <article class="description">
-  <p><p>stair section</p>
+  <p><p>if you add the following code to your <em>acaddoc.lsp</em> file, che current measurement unit will show upin the cad taskbar</p>
+<p><img src="..\..\blog\units\units.png" alt="status bar!"></p>
 </p>
   
-  <pre><code><p>some code here</p>
+     <p>command: <em>n/a</em></p>
+  
+  <pre><code><p>(SETVAR "modemacro" "UNITS: $(index,$(getvar,insunits),\"-,in,ft,mi,mm,cm,m,km,µin,mil,yd,A,nm,µm,dm,dam,hm,Gm,au,ly,pc\")</p>
 </code></pre>
 </article>
 
@@ -81,3 +88,4 @@
    <!-- <li class="column">| <a href="../../blog@atom/main">Atom Feed</a>.</li> -->
  </ul> </footer>
 </body>
+</html>

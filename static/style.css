@@ -3,11 +3,11 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-}
-
-body {
   display: flex;
   flex-direction: column;
+
+
+  background-color: #000000; //
 }
 
 main {
@@ -65,7 +65,8 @@ a {
 
 a:focus,
 a:hover {
-  color: #606c76;
+  color: #fff; /* #606c76; */
+  background-color: #808000;
 }
 nav a {
 }
@@ -78,7 +79,7 @@ footer,
 div.page {
 }
 aside.meta {
-  font-size: 0.75rem; 
+  font-size: 0.75rem !important; 
 }
 header h1 {
 }

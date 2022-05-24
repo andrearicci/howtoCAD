@@ -1,6 +1,9 @@
 <!doctype html>
+<html lang="it">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!-- <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
 <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
 <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
@@ -14,8 +17,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 <!-- You should properly set the path from the main file. -->
 <link rel="stylesheet" href="../../static/style.css">
-<title>test post — HowtoCAD</title>
-<body  id="test"  class="test  container blog-post">
+<title>Unità di misura — HowtoCAD</title>
+</head>
+<body  id="units"  class="units  container blog-post">
 
 <!-- HAmburger responsive menu https://codepen.io/alvarotrigo/pen/MWEJEWG -->
 <nav class="top-nav">
@@ -55,10 +59,29 @@
   
   <article class="blog-post">
   
-    <h2>test post</h2>
+    <h2>Unità di misura</h2>
   
   
-      <p>another post, let's see how it shows up in the overview</p>
+      <p>Impostare e unità di misura di un disegno è utilissimo:
+Il disegno è in centimetri? Metri?</p>
+<p>Quando copi qualche pezzo da un disegno all'altro, o lo usi come xref o blocco, se l'unità di misura è diversa, ma memorizzata nel file, il disegno scalerà automaticamente.<br>
+Da menù è (in inglese) <em>format-&gt;units</em>, come variabile è <em>insunits</em> . É una variabile numerica e per ogni cifra rappresenta un'unità diversa, il ché è un po' un casino, ma vi trascrivo qui di seguito le  più usate da noialtri:</p>
+<ul>
+<li>0 = Unspecified (No units)</li>
+<li>4 = mm</li>
+<li>5 = cm</li>
+<li>6 = m</li>
+</ul>
+<p>Per chi usa autoCad full, aggiungendo al file nella directory di supporto (o creandolo) <em>acaddoc.lsp</em> il codice</p>
+<pre><code>
+(SETVAR "modemacro" "UNITS: $(index,$(getvar,insunits),\"-,in,ft,mi,mm,cm,m,km,µin,mil,yd,A,nm,µm,dm,dam,hm,Gm,au,ly,pc\")
+</code></pre><p>mostrerà l'unità di misura corrente nella status bar:</p>
+<p><img src="units.png" alt="status bar!"></p>
+<p>Dal codice potete anche estrapolare le ulteriori equivalenze numero=unità.</p>
+<h3>Parrebbe bello, ma non è abbastanza.</h3>
+<p>Ricordate che Autodesk è una ditta americana e il software nasce in orribili unità imperiali. L'adattamento alle unità metriche è seguito successivamente. Oltre a questa variabile, l'intero file è legato ad un sistema o l'altro. Avete presente quando cercate di copiare le proprietà di un retino da un file all'altro e quello scala in maniera completamente imprevedibile? Pare che sia dovuto al fatto che il file sia nato in untà imperiali o metriche, ovvero partendo dal modello acad (imperiale) o metrico (acadiso). Per il vostro bene usate sempre quest'ultimo, se non ne avete uno vostro (spero costruito su quello). Cambiare in seguito è un bordello.</p>
+<p>E qui arriva un altro comando, che cerca di porrere rimedio al file nato male:
+<a href="https://www.landfx.com/docs/cad-basics/autocad-getting-started/item/4834-units.html">dwgunits</a> su cui tornerò in seguito (ma potete intanto digitarlo e rispondere alle domande).</p>
 
   
   
@@ -79,3 +102,4 @@
    <!-- <li class="column">| <a href="../../blog@atom/main">Atom Feed</a>.</li> -->
  </ul> </footer>
 </body>
+</html>
