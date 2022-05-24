@@ -59,28 +59,24 @@
   <h2>AutoCAD variables</h2>
   <p>Variables can be saved in the drawing file or in the system, they can affect a single file or all of them.</p>
 <p>Here's a collection of the ones I keep watching.</p>
+<p>Notice: some variables that keep multiple values use a system by wich the single values are added, often based on a binary code, e.g.  <a href="https://knowledge.autodesk.com/support/autocad-lt/learn-explore/caas/CloudHelp/cloudhelp/2023/ENU/AutoCAD-LT/files/GUID-DD9B3216-A533-4D47-95D8-7585F738FD75-htm.html">OSMODE</a> (the variable that keeps the current Osnaps setting) if set to 2^0=1 (endpoint) + 2^2=4 (center) + 2^5=32 (intersection) = 37 will snap to endpoints, centers and intersections.</p>
 <table>
   <thead>
     <tr>
       <th>Variable</th>
-      <th>System</th>
+      <th>System</th>2^0
       <th>Values</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>The survey triangle</td>
-      <td><a href="#">arsurvey.lsp</a></td>
-      <td>1,91</td>
-      <td>This creates a triangle given three distances, a location point, a direction and the orientation. Helpful to build surevys.</td>
+      <td>insunits</td>
+      <td>drawing</td>
+      <td>0 to 21</td>
+      <td>memorizes the current drawing units (meters, millimeters...)</td>
     </tr>
-    <tr>
-      <td>Klay Thompson</td>
-      <td>25</td>
-      <td>2,01</td>
-      <td>Los Angeles, CA</td>
-    </tr>
+
   </tbody>
 </table>
 

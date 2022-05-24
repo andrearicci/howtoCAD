@@ -7,7 +7,7 @@ body {
   flex-direction: column;
 
 
-  background-color: #000000; //
+  // background-color: #000000; //
 }
 
 main {
@@ -79,7 +79,7 @@ footer,
 div.page {
 }
 aside.meta {
-  font-size: 0.75rem !important; 
+  font-size: small; 
 }
 header h1 {
 }
