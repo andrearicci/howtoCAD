@@ -77,8 +77,8 @@ header,
 footer,
 div.page {
 }
-meta {
-  font-size: smaller;
+aside.meta {
+  font-size: 0.75rem; 
 }
 header h1 {
 }
