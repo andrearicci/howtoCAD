@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,9 +22,9 @@
 <!-- You should properly set the path from the main file. -->
 <link rel="stylesheet" href="../static/style.css">
 <link rel="stylesheet" href="../static/pygments.css">
-<title>AutoCAD variables — HowtoCAD</title>
+<title>Unità di misura — HowtoCAD</title>
 </head>
-<body  id="variables"  class="variables  container page">
+<body  id="unit.html"  class="unit.html  container blog-post">
 
 <!-- HAmburger responsive menu https://codepen.io/alvarotrigo/pen/MWEJEWG -->
 <nav class="top-nav">
@@ -37,9 +37,9 @@
 </label>
   <ul class="menu">
     
-      <li ><a href="../blog/">Blog</a></li>
+      <li  class="active"><a href="./">Blog</a></li>
     
-      <li  class="active"><a href="./">Variables</a></li>
+      <li ><a href="../variables/">Variables</a></li>
     
       <li ><a href="../tools/">Tools</a></li>
     
@@ -51,9 +51,9 @@
 <!--     <nav>
       <ul class="nav navbar-nav row">
         
-          <li class="column  column-10" ><a href="../blog/">Blog</a></li>
+          <li class="column  column-10"  class="active"><a href="./">Blog</a></li>
         
-          <li class="column  column-10"  class="active"><a href="./">variables</a></li>
+          <li class="column  column-10" ><a href="../variables/">variables</a></li>
         
           <li class="column  column-10" ><a href="../projects">Projects</a></li>
         
@@ -61,30 +61,41 @@
     </nav> -->
   <main>
     
-  <h2>AutoCAD variables</h2>
-  <p>Variables can be saved in the drawing file or in the system, they can affect a single file or all of them.</p>
-<p>Here's a collection of the ones I keep watching.</p>
-<p>Notice: some variables that keep multiple values use a system by wich the single values are added, often based on a binary code, e.g.  <a href="https://knowledge.autodesk.com/support/autocad-lt/learn-explore/caas/CloudHelp/cloudhelp/2023/ENU/AutoCAD-LT/files/GUID-DD9B3216-A533-4D47-95D8-7585F738FD75-htm.html">OSMODE</a> (the variable that keeps the current Osnaps setting) if set to 2^0=1 (endpoint) + 2^2=4 (center) + 2^5=32 (intersection) = 37 will snap to endpoints, centers and intersections.</p>
-<p>I personally keep a menu with some variable switches ready for quick access, eg: turn on and off image frames.</p>
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>System</th>2^0
-      <th>Values</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>insunits</td>
-      <td>drawing</td>
-      <td>0 to 21</td>
-      <td>memorizes the current drawing units (meters, millimeters...)</td>
-    </tr>
+  
+  <article class="blog-post">
+  
+    <h2>Unità di misura</h2>
+  
+  
+      <p>Impostare e unità di misura di un disegno è utilissimo:
+Il disegno è in centimetri? Metri?</p>
+<p>Quando copi qualche pezzo da un disegno all'altro, o lo usi come xref o blocco, se l'unità di misura è diversa, ma memorizzata nel file, il disegno scalerà automaticamente.<br>
+Da menù è (in inglese) <em>format-&gt;units</em>, come variabile è <em>insunits</em> . É una variabile numerica e per ogni cifra rappresenta un'unità diversa, il ché è un po' un casino, ma vi trascrivo qui di seguito le  più usate da noialtri:</p>
+<ul>
+<li>0 = Unspecified (No units)</li>
+<li>4 = mm</li>
+<li>5 = cm</li>
+<li>6 = m</li>
+</ul>
+<p>Per chi usa autoCad full, aggiungendo al file nella directory di supporto (o creandolo) <em>acaddoc.lsp</em> il codice</p>
+<pre><code>
+(SETVAR "modemacro" "UNITS: $(index,$(getvar,insunits),\"-,in,ft,mi,mm,cm,m,km,µin,mil,yd,A,nm,µm,dm,dam,hm,Gm,au,ly,pc\")
+</code></pre><p>mostrerà l'unità di misura corrente nella status bar:</p>
+<p><img src="unit.html/units.png" alt="status bar!"></p>
+<p>Dal codice potete anche estrapolare le ulteriori equivalenze numero=unità.</p>
+<h3>Parrebbe bello, ma non è abbastanza.</h3>
+<p>Ricordate che Autodesk è una ditta americana e il software nasce in orribili unità imperiali. L'adattamento alle unità metriche è seguito successivamente. Oltre a questa variabile, l'intero file è legato ad un sistema o l'altro. Avete presente quando cercate di copiare le proprietà di un retino da un file all'altro e quello scala in maniera completamente imprevedibile? Pare che sia dovuto al fatto che il file sia nato in untà imperiali o metriche, ovvero partendo dal modello <strong>acad</strong> (imperiale) o <strong>acadiso</strong> (metrico). Per il vostro bene usate sempre quest'ultimo, se non ne avete uno vostro (spero costruito su quello). Cambiare in seguito è un bordello.</p>
+<p>E qui arriva un altro comando, che cerca di porrere rimedio al file nato male:
+<a href="https://www.landfx.com/docs/cad-basics/autocad-getting-started/item/4834-units.html">dwgunits</a> su cui tornerò in seguito (ma potete intanto digitarlo e rispondere alle domande).</p>
 
-  </tbody>
-</table>
+  
+  
+  <aside class="meta">
+     2022-05-21
+      </aside>
+  </article>
+  
+
 
   </main>
   <footer>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,9 +22,9 @@
 <!-- You should properly set the path from the main file. -->
 <link rel="stylesheet" href="../static/style.css">
 <link rel="stylesheet" href="../static/pygments.css">
-<title>AutoCAD variables — HowtoCAD</title>
+<title>Dialogare — HowtoCAD</title>
 </head>
-<body  id="variables"  class="variables  container page">
+<body  id="dialogare.html"  class="dialogare.html  container blog-post">
 
 <!-- HAmburger responsive menu https://codepen.io/alvarotrigo/pen/MWEJEWG -->
 <nav class="top-nav">
@@ -37,9 +37,9 @@
 </label>
   <ul class="menu">
     
-      <li ><a href="../blog/">Blog</a></li>
+      <li  class="active"><a href="./">Blog</a></li>
     
-      <li  class="active"><a href="./">Variables</a></li>
+      <li ><a href="../variables/">Variables</a></li>
     
       <li ><a href="../tools/">Tools</a></li>
     
@@ -51,9 +51,9 @@
 <!--     <nav>
       <ul class="nav navbar-nav row">
         
-          <li class="column  column-10" ><a href="../blog/">Blog</a></li>
+          <li class="column  column-10"  class="active"><a href="./">Blog</a></li>
         
-          <li class="column  column-10"  class="active"><a href="./">variables</a></li>
+          <li class="column  column-10" ><a href="../variables/">variables</a></li>
         
           <li class="column  column-10" ><a href="../projects">Projects</a></li>
         
@@ -61,30 +61,24 @@
     </nav> -->
   <main>
     
-  <h2>AutoCAD variables</h2>
-  <p>Variables can be saved in the drawing file or in the system, they can affect a single file or all of them.</p>
-<p>Here's a collection of the ones I keep watching.</p>
-<p>Notice: some variables that keep multiple values use a system by wich the single values are added, often based on a binary code, e.g.  <a href="https://knowledge.autodesk.com/support/autocad-lt/learn-explore/caas/CloudHelp/cloudhelp/2023/ENU/AutoCAD-LT/files/GUID-DD9B3216-A533-4D47-95D8-7585F738FD75-htm.html">OSMODE</a> (the variable that keeps the current Osnaps setting) if set to 2^0=1 (endpoint) + 2^2=4 (center) + 2^5=32 (intersection) = 37 will snap to endpoints, centers and intersections.</p>
-<p>I personally keep a menu with some variable switches ready for quick access, eg: turn on and off image frames.</p>
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>System</th>2^0
-      <th>Values</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>insunits</td>
-      <td>drawing</td>
-      <td>0 to 21</td>
-      <td>memorizes the current drawing units (meters, millimeters...)</td>
-    </tr>
+  
+  <article class="blog-post">
+  
+    <h2>Dialogare</h2>
+  
+  
+      <p>Quando date un comando leggete bene tutte le opzioni che questo vi propone, nel prompt dei comandi a piede della finestra o vicino al cursore del muse, a partire da (quando ci sono) le preferenze del comando.<br>
+Se ci fate caso ci son un sacco di diverse impostazioni o alternative per eseguire il suddetto comando.</p>
+<p>Proviamo ad esempio <strong>trim</strong>: cliccate <em>options</em> e scoprirete che potrete limitare il comando alle intersezioni <em>effettive</em> o usare anche intersezioni <em>virtuali</em> cosa personalmente che detesto., ovvero le intersezioni con estensioni di oggetti con i quali non esiste un'intersezione vera e propria.</p>
 
-  </tbody>
-</table>
+  
+  
+  <aside class="meta">
+     
+      </aside>
+  </article>
+  
+
 
   </main>
   <footer>
