@@ -63,6 +63,9 @@ a {
   color: #808040;
 }
 
+p a {
+  font-weight: 600;
+}
 a:focus,
 a:hover {
   color: #606c76;
