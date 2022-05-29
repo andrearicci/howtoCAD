@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,9 +22,9 @@
 <!-- You should properly set the path from the main file. -->
 <link rel="stylesheet" href="../../static/style.css">
 <link rel="stylesheet" href="../../static/pygments.css">
-<title>Units in the taskbar  — HowtoCAD</title>
+<title>Scala disegno  — HowtoCAD</title>
 </head>
-<body  id="units"  class="units  container tool">
+<body  id="scala-disegno"  class="scala-disegno  container chapter">
 
 <!-- HAmburger responsive menu https://codepen.io/alvarotrigo/pen/MWEJEWG -->
 <nav class="top-nav">
@@ -39,11 +39,11 @@
     
       <li ><a href="../../blog/">Blog</a></li>
     
-      <li ><a href="../../standards/">Standards</a></li>
+      <li  class="active"><a href="../">Standards</a></li>
     
       <li ><a href="../../variables/">Variables</a></li>
     
-      <li  class="active"><a href="../">Tools</a></li>
+      <li ><a href="../../tools/">Tools</a></li>
     
   </ul>
 </nav>
@@ -66,22 +66,25 @@
 
 <!-- https://www.getlektor.com/docs/templates/navigation/ -->
 
-<hgroup>
-  
-  <h1>Units in the taskbar</h1>
-</hgroup>
 <!--https://stackoverflow.com/questions/46021761/lektor-checkboxes-u-ouput-error/48706156#48706156-->
 
 
-<article class="description">
-  <p><p>if you add the following code to your <em>acaddoc.lsp</em> file, che current measurement unit will show upin the cad taskbar</p>
-<p><img src="..\..\blog\units\units.png" alt="status bar!"></p>
-</p>
+<article class="chapter">
   
-     <p>command: <em>n/a</em></p>
+<hgroup>
   
-  <pre><code><p>(SETVAR "modemacro" "UNITS: $(index,$(getvar,insunits),\"-,in,ft,mi,mm,cm,m,km,µin,mil,yd,A,nm,µm,dm,dam,hm,Gm,au,ly,pc\")</p>
-</code></pre>
+  <h1>Scala disegno</h1>
+</hgroup>
+  <p>Da qualche tempo sono a disposizione quote, testi, blocchi e hatch <em>annotativi</em>. Sono tutti elementi che scalano in base al valore della scala della viewport. Questo semplifica enormemente la produzione di tavole che prevedono diverse scale da uno stesso file. Si possono avere viewport sullo statto layout ma di diversa scala di visualizzazione che facilmente hanno la stessa grafica (seguirà una nota sulla scala dei tratteggi). Potete vedere di seguito la proprietà scala di una viewport (bizzarramente ci viene concesso di usare una scala di visualizzazione e una divesra per le annotazioni)</p>
+<p><img src="scalaDisegno.jpg" alt="scala disegno"></p>
+<p>La stessa informazione è nella taskbar - quando si lavora nel <em>model space</em> da qui potete rapidamente scegliere la scala delle quote, blocchi e testi annotativi che inserirete o visualizzerete.</p>
+<p><img src="taskbar.png" alt="scala disegno"></p>
+<div class="admonition admonition-info"><p>il simbolo di annotativo rappresenta la sezione di uno <em>scalimetro</em></p></div><p>L'argomento è complesso, ha le sue complicazioni e richiede un po' di pratica per essere ottimizzato, ma sicuramente conviene rispetto all'inserire molteplici testi e quote in diversi layer.</p>
+<div class="admonition admonition-tip"><p>se scompaiono testi o dimensioni, nonstante tutti i layer siano accesi, probabilmente state vedendo il disegno a una scala per la quale i suddetti elementi annotativi non sono stati predisposti. "accendendo" il pulsante con il cerchietto, quello a sinistra dei due annotativi nella taskbar, si rendono visibili tutti gli oggetti annotativoi, anche quelli spenti alla scala corrente.</p></div><p>Per maggiori approfondimenti cercate <strong>annotative</strong> nella guida o online.</p>
+<h3>Stili quota non annotativi</h3>
+<p>Se non voleste utilizzare la comodità e complessità delle quote annotative, nel preparare gli stili di quota <em>statici</em> da utilizzare a diverse scale, il mio consiglio è di prepararne una che vi piaccia ad una data scala, e poi duplicarla semplicemente <strong>scalandola interamente</strong>, senza dover scalare tutte e ogni proprietà, con l'impostazione <em>use overall scale of</em></p>
+<p><img src="scaledim.png" alt="dimension scale"></p>
+
 </article>
 
 

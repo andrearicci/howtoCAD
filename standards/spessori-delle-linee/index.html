@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+<link rel="stylesheet" href="../../static/normalize.css">
+<link rel="stylesheet" href="../../static/skeleton.css"> -->
+<link rel="apple-touch-icon" sizes="180x180" href="../../static/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../static/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../static/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="../../static/favicon_io/site.webmanifest">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+<!-- CSS Reset -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+<!-- Milligram CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+<!-- You should properly set the path from the main file. -->
+<link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/pygments.css">
+<title>Spessori delle linee  — HowtoCAD</title>
+</head>
+<body  id="spessori-delle-linee"  class="spessori-delle-linee  container chapter">
+
+<!-- HAmburger responsive menu https://codepen.io/alvarotrigo/pen/MWEJEWG -->
+<nav class="top-nav">
+  <div>
+    <h1 class="logo"><a href="../../" title="Home">HowtoCAD</a></h1>
+  </div>
+  <input id="menu-toggle" type="checkbox" />
+  <label class='menu-button-container' for="menu-toggle">
+  <div class='menu-button'></div>
+</label>
+  <ul class="menu">
+    
+      <li ><a href="../../blog/">Blog</a></li>
+    
+      <li  class="active"><a href="../">Standards</a></li>
+    
+      <li ><a href="../../variables/">Variables</a></li>
+    
+      <li ><a href="../../tools/">Tools</a></li>
+    
+  </ul>
+</nav>
+
+<!-- -END- HAmburger responsive menu -->
+
+<!--     <nav>
+      <ul class="nav navbar-nav row">
+        
+          <li class="column  column-10" ><a href="../../blog/">Blog</a></li>
+        
+          <li class="column  column-10" ><a href="../../variables/">variables</a></li>
+        
+          <li class="column  column-10" ><a href="../../projects">Projects</a></li>
+        
+      </ul>
+    </nav> -->
+  <main>
+    
+
+<!-- https://www.getlektor.com/docs/templates/navigation/ -->
+
+<!--https://stackoverflow.com/questions/46021761/lektor-checkboxes-u-ouput-error/48706156#48706156-->
+
+
+<article class="chapter">
+  
+<hgroup>
+  
+  <h1>Spessori delle linee</h1>
+</hgroup>
+  <p>La norma UNI 3968 - ISO 128 prevede i seguenti spessori per le linee,
+espressi in millimetri :</p>
+<p>0,13  - 0,18 - 0,25 - 0,35 - 0,5 - 0,7 - 1,0 - 1,4 - 1,8 - 2,0</p>
+<div class="admonition admonition-info"><p>si tratta di due serie alternate che raddoppiano (o una che incrementa di √2) - Questo consente di lavorare su riproduzioni raddoppiate/dimezzate con penne omogenee.</p></div><p>da usare così:</p>
+<h3>tipo linea/spessore</h3>
+<table>
+<thead><tr>
+<th>id</th>
+<th>descr.</th>
+<th>utilizzo</th>
+<th>1:1</th>
+<th>1:5/1:10</th>
+<th>1:50</th>
+<th>1:100</th>
+<th>1:200</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>continua grossa</td>
+<td>sagome sezioni e spigoli in vista</td>
+<td>1,40</td>
+<td>1,00</td>
+<td>0,70</td>
+<td>0,50</td>
+<td>0,35</td>
+</tr>
+<tr>
+<td>a</td>
+<td>continua media</td>
+<td>sagome sezioni e spigoli in vista</td>
+<td>0,70</td>
+<td>0,50</td>
+<td>0,35</td>
+<td>0,25</td>
+<td>0,18</td>
+</tr>
+<tr>
+<td>B</td>
+<td>continua fine</td>
+<td>linee quote, tratteggi sezioni, ribaltamenti, spigoli fittizi in vista,assi di simmetria</td>
+<td>0,50</td>
+<td>0,35</td>
+<td>0,25</td>
+<td>0,18</td>
+<td>0,18</td>
+</tr>
+<tr>
+<td>D</td>
+<td>cont. fine zigzag</td>
+<td>limiti di viste e sezioni non assi di simmetria</td>
+<td>0,50</td>
+<td>0,35</td>
+<td>0,25</td>
+<td>0,18</td>
+<td>0,18</td>
+</tr>
+<tr>
+<td>E</td>
+<td>tratti grossa</td>
+<td>contorni e spigoli reali nascosti</td>
+<td>0,70</td>
+<td>0,50</td>
+<td>0,35</td>
+<td>0,25</td>
+<td>0,18</td>
+</tr>
+<tr>
+<td>F</td>
+<td>tratti fine</td>
+<td>"</td>
+<td>0,50</td>
+<td>0,35</td>
+<td>0,25</td>
+<td>0,18</td>
+<td>0,18</td>
+</tr>
+<tr>
+<td>H</td>
+<td>mista fine e grossa</td>
+<td>tracce di piani sezione (grossa estremità e variazioni di giacitura)</td>
+<td>1,4/,7</td>
+<td>1/,5</td>
+<td>,7/,35</td>
+<td>,5/,25</td>
+<td>,35/,18</td>
+</tr>
+<tr>
+<td>J</td>
+<td>mista grossa</td>
+<td>indicazioni di superfici o zone particolari</td>
+<td>0,70</td>
+<td>0,50</td>
+<td>0,35</td>
+<td>0,25</td>
+<td>0,18</td>
+</tr>
+<tr>
+<td>K</td>
+<td>fine due tratti corti uno lungo</td>
+<td>contorni di riferimenti vicini, posizioni estreme parti mobili, assi neutri o baricentrici, parti situate anteriormente al piano sezione, contorni parti eliminate</td>
+<td>0,50</td>
+<td>0,35</td>
+<td>0,25</td>
+<td>0,18</td>
+<td>0,18</td>
+</tr>
+</tbody>
+</table>
+<p><em>E o F in alternativa, non entrambi nello stesso disegno</em>.</p>
+<h3>Gli abbinamenti consigliati sono:</h3>
+<table>
+<thead><tr>
+<th>2 spessori</th>
+<th>3 spessori</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0,18-,035</td>
+<td>0,18-0,25-0,50</td>
+</tr>
+<tr>
+<td>0,25-0,50</td>
+<td>0,25-0,35-0,70</td>
+</tr>
+<tr>
+<td>0,35-0,70</td>
+<td>0,35-0,50-1,00</td>
+</tr>
+<tr>
+<td>0,50-1,40</td>
+<td>0,50-0,70-1,40</td>
+</tr>
+<tr>
+<td>0,70-2,00</td>
+<td>0,70-1,00-2,00</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition admonition-note"><p>non impazzite a calibrare penne con spessori che differiscono di micron: comunque stampanti e plotter diversi tradiranno i vostri intenti artistici.</p></div><h3>Spessore Delle Linee: Plottaggio (ctb/stb)</h3>
+<p>Il suggerimento ISO è il seguente:</p>
+<table>
+<thead><tr>
+<th style="text-align:right">Penna nr.</th>
+<th>Colore</th>
+<th style="text-align:right">Spessore Penna</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>ROSSO</td>
+<td style="text-align:right">0.35 mm</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>GIALLO</td>
+<td style="text-align:right">0.7 mm</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>VERDE</td>
+<td style="text-align:right">0.25 mm</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>CIANO</td>
+<td style="text-align:right">0.5 mm</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>BLU</td>
+<td style="text-align:right">0.25 mm</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>MAGENTA</td>
+<td style="text-align:right">0.5 mm</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>BIANCO</td>
+<td style="text-align:right">0.35 mm</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>GRIGIO chiaro</td>
+<td style="text-align:right">0.13 mm</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>GRIGIO scuro</td>
+<td style="text-align:right">0.13 mm</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>OCRA</td>
+<td style="text-align:right">1 mm</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition admonition-info"><p>i colori corrispondono a quelli dei Rapidograph</p></div><div class="admonition admonition-tip"><p>personalmente uso i 255 colori di base <strong>tutti neri</strong> (eccetto 250-255 che per antica abitudine lascio dei rispettivi grigi) e per ottenere dei colori scelgo specificamente il sistema RGB.</p></div><h3>STB</h3>
+<p><strong>sfruttando le recenti versioni di AutoCad</strong> ci si puó affrancare dalla corrispondenza colore=spessore:</p>
+<p>Il file di stile di stampa STB puo' definire stili arbitrari, nominali, di plottaggio, da assegnare ai layer o ai singoli oggetti. 
+Nel nostro caso sono stati implementati una serie di file stb diversi per diverse scale che definiscono i seguenti stili, opportunamente assegnati ai layer:</p>
+<table>
+<thead><tr>
+<th>nome</th>
+<th>finissimo</th>
+<th style="text-align:right">1:20</th>
+<th style="text-align:right">1:50</th>
+<th style="text-align:right">1:100</th>
+<th>1:200</th>
+<th>1:500</th>
+<th>note:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>black 0</td>
+<td>0.00</td>
+<td style="text-align:right">0.00</td>
+<td style="text-align:right">0.00</td>
+<td style="text-align:right">0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>colore nero,diversi spessori ISO,a prescindere dal colore degli oggetti</td>
+</tr>
+<tr>
+<td>black XXS</td>
+<td>0.00</td>
+<td style="text-align:right">0.25</td>
+<td style="text-align:right">0.18</td>
+<td style="text-align:right">0.09.</td>
+<td>0.05</td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr>
+<td>black XS</td>
+<td>0.00</td>
+<td style="text-align:right">0.35</td>
+<td style="text-align:right">0.25</td>
+<td style="text-align:right">0.18</td>
+<td>0.09</td>
+<td>0.05</td>
+<td></td>
+</tr>
+<tr>
+<td>black S</td>
+<td>0.00</td>
+<td style="text-align:right">0.5</td>
+<td style="text-align:right">0.35</td>
+<td style="text-align:right">0.25</td>
+<td>0.18</td>
+<td>0.09</td>
+<td></td>
+</tr>
+<tr>
+<td>black M</td>
+<td>0.00</td>
+<td style="text-align:right">0.7</td>
+<td style="text-align:right">0.5</td>
+<td style="text-align:right">0.35</td>
+<td>0.25</td>
+<td>0.18</td>
+<td></td>
+</tr>
+<tr>
+<td>black L</td>
+<td>0.00</td>
+<td style="text-align:right">1.0</td>
+<td style="text-align:right">0.7</td>
+<td style="text-align:right">0.5</td>
+<td>0.25</td>
+<td>0.18</td>
+<td></td>
+</tr>
+<tr>
+<td>black XL</td>
+<td>0.00</td>
+<td style="text-align:right">1.4</td>
+<td style="text-align:right">1.0</td>
+<td style="text-align:right">0.7</td>
+<td>0.5</td>
+<td>0.35</td>
+<td></td>
+</tr>
+<tr>
+<td>black XXL</td>
+<td>0.00</td>
+<td style="text-align:right">2.0</td>
+<td style="text-align:right">1.4</td>
+<td style="text-align:right">1.0</td>
+<td>0.7</td>
+<td>0.5</td>
+<td></td>
+</tr>
+<tr>
+<td>black ByObj</td>
+<td>ByObject</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+<td></td>
+<td>nero,spessore dell'oggetto o layer (ad es. per quotature,hatch)</td>
+</tr>
+<tr>
+<td>color L (M/S)</td>
+<td>cfr. Black</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+<td></td>
+<td>colore del layer/oggetto,diversi spessori ISO.</td>
+</tr>
+<tr>
+<td>gray 10% (20%,30%…)</td>
+<td>ByObject</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+<td></td>
+<td>Diverse intensità di grigio,spessore da layer/oggetto,a prescindere dal colore originale</td>
+</tr>
+<tr>
+<td>white</td>
+<td>ByObject</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+<td></td>
+<td>Bianco (coprente)</td>
+</tr>
+</tbody>
+</table>
+<p>Questa impostazione consente,assegnando gli stili di stampa ai layer (ad esempio <em>sezioni muri:Black XL</em> ):</p>
+<ul>
+<li>di scegliere i colori a schermo di proprio gradimento;</li>
+<li>la non interferenza di colori per disegni ricevuti da altri progettisti (basterà&nbsp; aggiungere all'stb i nuovi stili,anzichà© cambiare il colore dei layer);</li>
+<li>assegnare spessori relativi ai layer/oggetti,facilmente scalabili cambiando stb; </li>
+<li>aggiungere facilmente stili arbitrari (è controllabile anche l'intensità&nbsp; del pigmento vedi  i <strong>Gray</strong>)</li>
+<li>usare oggetti colorati diversamente su unico layer (es:X-COLR) assegnando semplicemente i colori desiderati agli oggetti;</li>
+<li>il <strong>white</strong> consente cancellazioni,testi bianchi su hatch colorati</li>
+</ul>
+<p>Se ricevete file da fuori, da usare come basi XREF ad esempio, è piuttosto facile calibrarne i layer (conoscendone il ctb, si ordinano per colore e gli si assegna il corretto plotstyle). Non è facile il contrario: se si usa lo stesso colore in layer da diversi <em>plotstyle</em>, convertirlo in <em>ctb</em> è impossibile. Per cui il consiglio è comunque mantenere un criterio di colori anche quando si adottano gli <em>stb</em>.</p>
+
+</article>
+
+
+  </main>
+  <footer>
+    <ul class="row">
+   <li class="column"> &copy; Copyright 2022 by <a href="https://andrearicci.it">Andrea Ricci</a>.</li>
+   <li class="column"><a href="https://github.com/andrearicci"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+  </svg></a>.</li>
+   <!-- <li class="column">| <a href="../../blog@atom/main">Atom Feed</a>.</li> -->
+ </ul> </footer>
+</body>
+</html>

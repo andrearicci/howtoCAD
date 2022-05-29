@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,9 +22,9 @@
 <!-- You should properly set the path from the main file. -->
 <link rel="stylesheet" href="../../static/style.css">
 <link rel="stylesheet" href="../../static/pygments.css">
-<title>Units in the taskbar  — HowtoCAD</title>
+<title>layers  — HowtoCAD</title>
 </head>
-<body  id="units"  class="units  container tool">
+<body  id="layers"  class="layers  container chapter">
 
 <!-- HAmburger responsive menu https://codepen.io/alvarotrigo/pen/MWEJEWG -->
 <nav class="top-nav">
@@ -39,11 +39,11 @@
     
       <li ><a href="../../blog/">Blog</a></li>
     
-      <li ><a href="../../standards/">Standards</a></li>
+      <li  class="active"><a href="../">Standards</a></li>
     
       <li ><a href="../../variables/">Variables</a></li>
     
-      <li  class="active"><a href="../">Tools</a></li>
+      <li ><a href="../../tools/">Tools</a></li>
     
   </ul>
 </nav>
@@ -66,22 +66,48 @@
 
 <!-- https://www.getlektor.com/docs/templates/navigation/ -->
 
-<hgroup>
-  
-  <h1>Units in the taskbar</h1>
-</hgroup>
 <!--https://stackoverflow.com/questions/46021761/lektor-checkboxes-u-ouput-error/48706156#48706156-->
 
 
-<article class="description">
-  <p><p>if you add the following code to your <em>acaddoc.lsp</em> file, che current measurement unit will show upin the cad taskbar</p>
-<p><img src="..\..\blog\units\units.png" alt="status bar!"></p>
-</p>
+<article class="chapter">
   
-     <p>command: <em>n/a</em></p>
+<hgroup>
   
-  <pre><code><p>(SETVAR "modemacro" "UNITS: $(index,$(getvar,insunits),\"-,in,ft,mi,mm,cm,m,km,µin,mil,yd,A,nm,µm,dm,dam,hm,Gm,au,ly,pc\")</p>
-</code></pre>
+  <h1>layers</h1>
+</hgroup>
+  <p>(work in progress)</p>
+<table>
+<thead><tr>
+<th>nome</th>
+<th>linea</th>
+<th>on</th>
+<th>freeze</th>
+<th>lock</th>
+<th>color</th>
+<th>ltype</th>
+<th>lweight</th>
+<th>plotStyle*</th>
+<th>plot</th>
+<th>descr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>default</td>
+<td>on</td>
+<td>thaw</td>
+<td>unlock</td>
+<td>7</td>
+<td>continuous</td>
+<td>default</td>
+<td>*</td>
+<td>plot</td>
+<td>0 è uno dei layer di default, fondamentale. non spegnerlo mai in stampa.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition admonition-warning"><p>*<strong>plotstyle</strong> è presente solo se il file è basato su <em>stb</em> invece di <em>ctb</em> (il file nasce in un modo o nell'altro, ma può essere convertito fra le due modalità).</p></div>
 </article>
 
 

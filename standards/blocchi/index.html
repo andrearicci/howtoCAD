@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html >
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,9 +22,9 @@
 <!-- You should properly set the path from the main file. -->
 <link rel="stylesheet" href="../../static/style.css">
 <link rel="stylesheet" href="../../static/pygments.css">
-<title>Units in the taskbar  — HowtoCAD</title>
+<title>Blocchi  — HowtoCAD</title>
 </head>
-<body  id="units"  class="units  container tool">
+<body  id="blocchi"  class="blocchi  container chapter">
 
 <!-- HAmburger responsive menu https://codepen.io/alvarotrigo/pen/MWEJEWG -->
 <nav class="top-nav">
@@ -39,11 +39,11 @@
     
       <li ><a href="../../blog/">Blog</a></li>
     
-      <li ><a href="../../standards/">Standards</a></li>
+      <li  class="active"><a href="../">Standards</a></li>
     
       <li ><a href="../../variables/">Variables</a></li>
     
-      <li  class="active"><a href="../">Tools</a></li>
+      <li ><a href="../../tools/">Tools</a></li>
     
   </ul>
 </nav>
@@ -66,22 +66,19 @@
 
 <!-- https://www.getlektor.com/docs/templates/navigation/ -->
 
-<hgroup>
-  
-  <h1>Units in the taskbar</h1>
-</hgroup>
 <!--https://stackoverflow.com/questions/46021761/lektor-checkboxes-u-ouput-error/48706156#48706156-->
 
 
-<article class="description">
-  <p><p>if you add the following code to your <em>acaddoc.lsp</em> file, che current measurement unit will show upin the cad taskbar</p>
-<p><img src="..\..\blog\units\units.png" alt="status bar!"></p>
-</p>
+<article class="chapter">
   
-     <p>command: <em>n/a</em></p>
+<hgroup>
   
-  <pre><code><p>(SETVAR "modemacro" "UNITS: $(index,$(getvar,insunits),\"-,in,ft,mi,mm,cm,m,km,µin,mil,yd,A,nm,µm,dm,dam,hm,Gm,au,ly,pc\")</p>
-</code></pre>
+  <h1>Blocchi</h1>
+</hgroup>
+  <p>I blocchi semplici (di un solo layer) vanno creati sul layer 0 con tutte le caratteristiche (colore, tipolinea, linewight, plotstyle...) settate a <em>byblock</em>, e poi inseriti nel layer opportuno (es. simboli elettrici nel layer E-ELEC, sanitari in A_SANI) questo semplifica l'accensione/spegnimento dei layer.</p>
+<p>La proprietà BYBLOCK significa che alla singola istanza si possono poi dare caratteristiche diverse che non quelle del layer in cui sono inseriti, ad esempio a un wc si potrebbe forzare lo stile linea tratteggio diversamente dalla proprietà del layer.</p>
+<p>I blocchi più' complessi, che richiedono più layer (es. la camera di un albergo) viceversa vanno creati con i diversi elementi nei layer opportuni e poi inseriti nel layer 0, o uno specificamente creato, non un layer qalunque tipo MURI.</p>
+
 </article>
 
 

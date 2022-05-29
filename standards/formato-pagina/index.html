@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,9 +22,9 @@
 <!-- You should properly set the path from the main file. -->
 <link rel="stylesheet" href="../../static/style.css">
 <link rel="stylesheet" href="../../static/pygments.css">
-<title>Units in the taskbar  — HowtoCAD</title>
+<title>Formato pagina  — HowtoCAD</title>
 </head>
-<body  id="units"  class="units  container tool">
+<body  id="formato-pagina"  class="formato-pagina  container chapter">
 
 <!-- HAmburger responsive menu https://codepen.io/alvarotrigo/pen/MWEJEWG -->
 <nav class="top-nav">
@@ -39,11 +39,11 @@
     
       <li ><a href="../../blog/">Blog</a></li>
     
-      <li ><a href="../../standards/">Standards</a></li>
+      <li  class="active"><a href="../">Standards</a></li>
     
       <li ><a href="../../variables/">Variables</a></li>
     
-      <li  class="active"><a href="../">Tools</a></li>
+      <li ><a href="../../tools/">Tools</a></li>
     
   </ul>
 </nav>
@@ -66,22 +66,87 @@
 
 <!-- https://www.getlektor.com/docs/templates/navigation/ -->
 
-<hgroup>
-  
-  <h1>Units in the taskbar</h1>
-</hgroup>
 <!--https://stackoverflow.com/questions/46021761/lektor-checkboxes-u-ouput-error/48706156#48706156-->
 
 
-<article class="description">
-  <p><p>if you add the following code to your <em>acaddoc.lsp</em> file, che current measurement unit will show upin the cad taskbar</p>
-<p><img src="..\..\blog\units\units.png" alt="status bar!"></p>
-</p>
+<article class="chapter">
   
-     <p>command: <em>n/a</em></p>
+<hgroup>
   
-  <pre><code><p>(SETVAR "modemacro" "UNITS: $(index,$(getvar,insunits),\"-,in,ft,mi,mm,cm,m,km,µin,mil,yd,A,nm,µm,dm,dam,hm,Gm,au,ly,pc\")</p>
-</code></pre>
+  <h1>Formato pagina</h1>
+</hgroup>
+  <p>Per il disegno sono indicati i seguenti formati normalizzati UNI 936 -
+ISO 5457 della carta in millimetri:</p>
+<table>
+<thead><tr>
+<th>ID</th>
+<th>Dim.</th>
+<th>formati allungati</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A0</strong></td>
+<td>841x1189</td>
+<td><strong>A0x2</strong></td>
+<td>1189x1682</td>
+<td><strong>A0x3</strong></td>
+<td>1189x2523</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>A1</strong></td>
+<td>594x841</td>
+<td><strong>A1x3</strong></td>
+<td>841x1783</td>
+<td><strong>A1x4</strong></td>
+<td>841x2378</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>A2</strong></td>
+<td>420x594</td>
+<td><strong>A2x3</strong></td>
+<td>594x1261</td>
+<td><strong>A2x4</strong></td>
+<td>594x1682</td>
+<td><strong>A2x5</strong></td>
+<td>594x2102</td>
+<td><strong>A2x6</strong></td>
+<td>594x2522</td>
+</tr>
+<tr>
+<td><strong>A3</strong></td>
+<td>297x420</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>A4</strong></td>
+<td>210x297</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition admonition-info"><p>Per curiosità: il punto di partenza, A0, misura un metro quadro.</p></div>
 </article>
 
 

@@ -3,6 +3,8 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
+
+  font-weight: 400;
 }
 
 body {
@@ -13,12 +15,14 @@ body {
 main {
   flex-grow: 1;
 }
-.logo a, .logo a:visited, .logo a:hover {
+.logo a,
+.logo a:visited,
+.logo a:hover {
   color: #aa0000;
   font-weight: 600;
   display: inline-block;
   margin-top: 5%;
-  background-color:transparent;
+  background-color: transparent;
   /*   padding-top:0.5em;
   margin-bottom:-30px; */
 }
@@ -62,7 +66,10 @@ a:active {
 a {
   color: #808040;
 }
+li {
+  margin-bottom:0;
 
+}
 p a {
   font-weight: 600;
 }
@@ -101,8 +108,64 @@ figure.banner {
   display: flex;
   justify-content: center;
 }
+.book {
+  counter-reset: chapter;
+}
+.chapter h2:before {
+  content: counter(chapter) ". ";
+  counter-increment: chapter;
+  font-size: smaller;
+}
+/* sottoemnù del libro degli standard */
+nav.standard {
+  display: flex;
+}
+nav.standard ul {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+}
+nav.standard a {
+  padding: 0.5rem 1rem;
+  font-size: 80%;
+}
 
-// CSS hamburgher menu https://codepen.io/alvarotrigo/pen/MWEJEWG
+blockquote p{margin-bottom:0;}
+
+.admonition p{
+  margin-left:2em;
+  margin-right:2em;
+  border-radius: 0.5em;
+  padding:0.5em;
+}
+
+.admonition-note p{ 
+  background-color: #f1f7fc;
+}
+.admonition-note  p:before{ 
+  content: "✎ ";
+}
+.admonition-info p{ 
+  background-color: #e7f6ef;
+}
+.admonition-info  p:before{ 
+  content: "🛈 ";
+}
+.admonition-tip p{ 
+  background-color: #fffbea;
+}
+.admonition-tip p:before{ 
+  content: "💡 ";
+}
+.admonition-warning p{ 
+  background-color: #f9e7e4;
+}
+.admonition-warning p:before{ 
+  content: "⚠ ";
+}
+/*----------------------------------------------------------------*/
+//  CSS hamburgher menu https://codepen.io/alvarotrigo/pen/MWEJEWG
+/*----------------------------------------------------------------*/
 * {
   box-sizing: border-box;
 }
@@ -184,10 +247,12 @@ figure.banner {
 }
 
 @media (max-width: 700px) {
-    .top-nav {
-        height: 50px;
-      }
-      .logo a {font-size:60%;}
+  .top-nav {
+    height: 50px;
+  }
+  .logo a {
+    font-size: 60%;
+  }
   .menu-button-container {
     display: flex;
   }
