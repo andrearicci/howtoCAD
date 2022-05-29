@@ -70,25 +70,27 @@
   
   
       <p>Per avere tratteggi omogenei tra diverse viewport, di diversa scala, su uno stesso layout, ci sono da settare una serie di variabili che, volendo, potete predisporre in un comando da menù:</p>
-<pre> ^C^CMSLTSCALE;1;PSLTSCALE;1;CELTSCALE;1;</pre><blockquote><p>MSLTSCALE</p>
+<pre> ^C^CMSLTSCALE;1;PSLTSCALE;1;CELTSCALE;1;</pre><p>A questo punto la scala generale dei tratteggi del file è regolata da un'unica variabile LTSCALE e dalla scala di visualizzazione della viewport (model incluso).</p>
+<p><img src="taskbar.png" alt="scala disegno"></p>
+<blockquote><p><strong>MSLTSCALE</strong></p>
 <p>Scales linetypes displayed on the model tab by the annotation scale.</p>
 <p>Type:  Integer</p>
 <p>Saved in:  Drawing</p>
 <p>Initial value: 1</p>
-<p>PSLTSCALE</p>
+<p><strong>PSLTSCALE</strong></p>
 <p>Controls the linetype scaling of objects displayed in paper space viewports.</p>
 <p>Type:  Integer</p>
 <p>Saved in:  Drawing</p>
 <p>Initial value: 1</p>
 <p>The linetype scale for non-continuous linetypes can be set to depend on either the magnification scale of each layout viewport, or uniformly, based on the  overall scale of paper space. Different layout tabs can have different settings for PSLTSCALE.</p>
-<p>CELTSCALE</p>
+<p><strong>CELTSCALE</strong></p>
 <p>Sets the current object linetype scaling factor.
 Type:  Real</p>
 <p>Saved in:  Drawing</p>
 <p>Initial value: 1.0000</p>
 <p>Sets the linetype scaling for new objects relative to the LTSCALE command setting. A line created with CELTSCALE = 2 in a drawing with LTSCALE set to 0.5 would appear the same as a line created with CELTSCALE = 1 in a drawing with LTSCALE = 1.</p>
 </blockquote>
-<div class="admonition admonition-warning"><p>questo approccio impedisce di usare i tipi-linea bidimensionali, quelli che hanno uno "spessore" come <em>batting</em>, <em>zigzag</em> o <em>track</em> in quanto scalerebbero diversamente nelle diverse viste, si perde completamente il controllo sull'altezza delle medesime.</p></div>
+<div class="admonition admonition-warning"><p>questo approccio impedisce di usare i tipi-linea bidimensionali, quelli che hanno uno "spessore" come <em>batting</em>, <em>zigzag</em> o <em>track</em> in quanto scalerebbero diversamente nelle diverse viste, purtroppo si perde completamente il controllo sull'altezza delle medesime.</p></div>
   
   
   <aside class="meta">

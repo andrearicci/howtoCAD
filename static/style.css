@@ -1,3 +1,20 @@
+:root {
+  --primary-color: #302AE6;
+  --secondary-color: #536390;
+  --font-color: #606c76;
+  --bg-color: #fff;
+  --heading-color: #aa0000;
+  --link-color: #808000;
+}
+[data-theme="dark"] {
+  --primary-color: #9A97F3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #aa0000;
+}
+
+
 html,
 body {
   padding: 0;
@@ -18,7 +35,7 @@ main {
 .logo a,
 .logo a:visited,
 .logo a:hover {
-  color: #aa0000;
+  color: var(--heading-color);
   font-weight: 600;
   display: inline-block;
   margin-top: 5%;
@@ -64,7 +81,7 @@ a:hover {
 a:active {
 }
 a {
-  color: #808040;
+  color: var(--link-color);//#808040
 }
 li {
   margin-bottom:0;
@@ -75,13 +92,13 @@ p a {
 }
 a:focus,
 a:hover {
-  color: #606c76;
+  color: var(--font-color); 
 }
 nav a {
 }
 nav a:hover {
   color: #ccc;
-  background-color: #808000;
+  background-color: var(--link-color);
 }
 header,
 footer,
@@ -132,6 +149,8 @@ nav.standard a {
 
 blockquote p{margin-bottom:0;}
 
+code  p:last-of-type {margin-bottom:0;}
+
 .admonition p{
   margin-left:2em;
   margin-right:2em;
@@ -177,10 +196,10 @@ blockquote p{margin-bottom:0;}
   background-color: transparent;
   /*background: linear-gradient(to left, #f46b45, #eea849);
      W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #808000;
+  color: var(--link-color);
   height: 100px;
   padding: 1em;
-  border-bottom: 1px solid #aa0000;
+  border-bottom: 1px solid var(--heading-color);
 }
 
 .menu {
@@ -214,7 +233,7 @@ blockquote p{margin-bottom:0;}
 .menu-button::before,
 .menu-button::after {
   display: block;
-  background-color: #808000; /*colore hamburger */
+  background-color: var(--link-color); /*colore hamburger */
   position: absolute;
   height: 4px;
   width: 30px;
