@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>howtoCAD blog</title>
+    <link>https://andrearicci.github.io/howtoCAD/blog/</link>
+    <description>Il mio ultimo articolo</description>
+
+    <item>
+      <title>Scala tratteggi</title>
+      <link>https://andrearicci.github.io/howtoCAD/blog/scala-tratteggi/</link>
+      <guid>https://andrearicci.github.io/howtoCAD/blog/scala-tratteggi/</guid>
+      <pubDate>Mer, 30 Maj 2022 13:20:00 GMT</pubDate>
+      <description>Per avere tratteggi omogenei tra diverse viewport, di diversa scala, su uno stesso layout, ci sono da settare una serie di variabili che, volendo, potete predisporre in un comando da menù: […]</description>
+    </item>
+
+    <item>
+      <title>Dialogare</title>
+      <link>https://andrearicci.github.io/howtoCAD/blog/dialogare.html</link>
+      <guid>https://andrearicci.github.io/howtoCAD/blog/dialogare.html</guid>
+      <pubDate>Mar, 14 maj 2022 13:20:00 GMT</pubDate>
+      <description>Quando date un comando leggete bene tutte le opzioni che questo vi propone, nel prompt dei comandi a piede della finestra o vicino al cursore del muse, a partire da (quando ci sono) le preferenze del comando.
+        Se ci fate caso ci son un sacco di diverse impostazioni o alternative per eseguire il suddetto comando.</description>
+    </item>
+
+    <item>
+      <title>PDF/A</title>
+      <link>https://andrearicci.github.io/howtoCAD/blog/pdf-a.html</link>
+      <guid>https://andrearicci.github.io/howtoCAD/blog/pdf-a.html</guid>
+      <pubDate>Lun, 14 maj 2022 13:20:00 GMT</pubDate>
+      <description>Il PDF/A è un formato da "archivio" che garantirebbe la compatibilità del documento sui lunghi periodi e viene spesso richiesto dagli enti pubblici. Pure di questo esistono diversi sottogruppi ma difficlmente glie enti specificano quale. Il più basico esclude le trasparenze.[…]</description>
+    </item>
+    item>
+
+    <item>
+      <title>Unità di misura</title>
+      <link>https://andrearicci.github.io/howtoCAD/blog/unit.html</link>
+      <guid>https://andrearicci.github.io/howtoCAD/blog/unit.html</guid>
+      <pubDate>Lun, 21 maj 2022 13:20:00 GMT</pubDate>
+      <description>Impostare e unità di misura di un disegno è utilissimo: Il disegno è in centimetri? Metri?
+        Quando copi qualche pezzo da un disegno all'altro, o lo usi come xref o blocco, se l'unità di misura è diversa, ma memorizzata nel file, il disegno scalerà automaticamente.[…]</description>
+    </item>
+
+  </channel>
+</rss>
