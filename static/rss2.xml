@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"></rss><atom:link href="https://andrearicci.github.io/howtoCAD/static/rss2.xml" rel="self" type="application/rss+xml" /><channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
   <title>howtoCAD blog</title>
   <link>https://andrearicci.github.io/howtoCAD/blog/</link>
   <description>Yet Another CAD Blog</description>
-  <lastBuildDate>31 Maj 2022 13:20:00 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 31 Maj 2022 13:20:00 GMT</lastBuildDate>
+  <atom:link href="https://andrearicci.github.io/howtoCAD/static/rss2.xml" rel="self" type="application/rss+xml" />
 
   <item>
     <title>Scala tratteggi</title>
     <link>https://andrearicci.github.io/howtoCAD/blog/scala-tratteggi/</link>
     <guid>https://andrearicci.github.io/howtoCAD/blog/scala-tratteggi/</guid>
-    <pubDate>30 Maj 2022 13:20:00 GMT</pubDate>
+    <pubDate>Tue, 31 Maj 2022 13:20:00 GMT</pubDate>
     <description>Per avere tratteggi omogenei tra diverse viewport, di diversa scala, su uno stesso layout, ci sono da settare una serie di variabili che, volendo, potete predisporre in un comando da menù: […]</description>
   </item>
 
@@ -18,7 +19,7 @@
     <title>Dialogare</title>
     <link>https://andrearicci.github.io/howtoCAD/blog/dialogare.html</link>
     <guid>https://andrearicci.github.io/howtoCAD/blog/dialogare.html</guid>
-    <pubDate>14 maj 2022 13:20:00 GMT</pubDate>
+    <pubDate>Tue, 31 maj 2022 13:20:00 GMT</pubDate>
     <description>Quando date un comando leggete bene tutte le opzioni che questo vi propone, nel prompt dei comandi a piede della finestra o vicino al cursore del muse, a partire da (quando ci sono) le preferenze del comando.
         Se ci fate caso ci son un sacco di diverse impostazioni o alternative per eseguire il suddetto comando.</description>
   </item>
@@ -27,7 +28,7 @@
     <title>PDF/A</title>
     <link>https://andrearicci.github.io/howtoCAD/blog/pdf-a.html</link>
     <guid>https://andrearicci.github.io/howtoCAD/blog/pdf-a.html</guid>
-    <pubDate>14 maj 2022 13:20:00 GMT</pubDate>
+    <pubDate>Tue, 31 maj 2022 13:20:00 GMT</pubDate>
     <description>Il PDF/A è un formato da "archivio" che garantirebbe la compatibilità del documento sui lunghi periodi e viene spesso richiesto dagli enti pubblici. Pure di questo esistono diversi sottogruppi ma difficlmente glie enti specificano quale. Il più basico esclude le trasparenze.[…]</description>
   </item>
 
@@ -35,9 +36,44 @@
     <title>Unità di misura</title>
     <link>https://andrearicci.github.io/howtoCAD/blog/unit.html</link>
     <guid>https://andrearicci.github.io/howtoCAD/blog/unit.html</guid>
-    <pubDate>21 maj 2022 13:20:00 GMT</pubDate>
+    <pubDate>Tue, 31 maj 2022 13:20:00 GMT</pubDate>
     <description>Impostare e unità di misura di un disegno è utilissimo: Il disegno è in centimetri? Metri?
         Quando copi qualche pezzo da un disegno all'altro, o lo usi come xref o blocco, se l'unità di misura è diversa, ma memorizzata nel file, il disegno scalerà automaticamente.[…]</description>
   </item>
 
 </channel></rss>
+
+<!-- 5. Date and Time Specification
+5.1. SYNTAX
+
+date-time   =  [ day "," ] date time        ; dd mm yy
+                                            ;  hh:mm:ss zzz
+
+day         =  "Mon"  / "Tue" /  "Wed"  / "Thu"
+            /  "Fri"  / "Sat" /  "Sun"
+
+date        =  1*2DIGIT month 2DIGIT        ; day month year
+                                            ;  e.g. 20 Jun 82
+
+month       =  "Jan"  /  "Feb" /  "Mar"  /  "Apr"
+            /  "May"  /  "Jun" /  "Jul"  /  "Aug"
+            /  "Sep"  /  "Oct" /  "Nov"  /  "Dec"
+
+time        =  hour zone                    ; ANSI and Military
+
+hour        =  2DIGIT ":" 2DIGIT [":" 2DIGIT]
+                                            ; 00:00:00 - 23:59:59
+
+zone        =  "UT"  / "GMT"                ; Universal Time
+                                            ; North American : UT
+            /  "EST" / "EDT"                ;  Eastern:  - 5/ - 4
+            /  "CST" / "CDT"                ;  Central:  - 6/ - 5
+            /  "MST" / "MDT"                ;  Mountain: - 7/ - 6
+            /  "PST" / "PDT"                ;  Pacific:  - 8/ - 7
+            /  1ALPHA                       ; Military: Z = UT;
+                                            ;  A:-1; (J not used)
+                                            ;  M:-12; N:+1; Y:+12
+            / ( ("+" / "-") 4DIGIT )        ; Local differential
+                                            ;  hours+min. (HHMM)
+
+-->
