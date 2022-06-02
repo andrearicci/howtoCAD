@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  
+  <channel>
+  <title>howtoCAD blog</title>
+    <link>https://andrearicci.github.io/howtoCAD/</link>
+    <description>Yet Another CAD (Ctrl Alt Del) Blog</description>
+    <lastBuildDate>Tue, 02 Jun 2022 13:20:00 +0001</lastBuildDate>
+    <!--atom:link href="https://andrearicci.github.io/howtoCAD/rss.xml" rel="self" type="application/rss+xml" /-->
+         
+            <item>
+              <title>Dialogare</title>
+              <link>https://andrearicci.github.io/howtoCAD/blog/dialogare.html</link>
+              <guid>https://andrearicci.github.io/howtoCAD/blog/dialogare.html</guid>
+              <pubDate>Sat, 14 May 2022 00:00:00 +0001</pubDate>
+              <description></description>
+            </item>
+         
+            <item>
+              <title>PDF/A</title>
+              <link>https://andrearicci.github.io/howtoCAD/blog/pdf-a.html</link>
+              <guid>https://andrearicci.github.io/howtoCAD/blog/pdf-a.html</guid>
+              <pubDate>Sat, 14 May 2022 00:00:00 +0001</pubDate>
+              <description></description>
+            </item>
+         
+            <item>
+              <title>Scala tratteggi</title>
+              <link>https://andrearicci.github.io/howtoCAD/blog/scala-tratteggi/</link>
+              <guid>https://andrearicci.github.io/howtoCAD/blog/scala-tratteggi/</guid>
+              <pubDate>Sat, 14 May 2022 00:00:00 +0001</pubDate>
+              <description></description>
+            </item>
+         
+            <item>
+              <title>Unità di misura</title>
+              <link>https://andrearicci.github.io/howtoCAD/blog/unit.html</link>
+              <guid>https://andrearicci.github.io/howtoCAD/blog/unit.html</guid>
+              <pubDate>Sat, 21 May 2022 00:00:00 +0001</pubDate>
+              <description></description>
+            </item>
+       
+  </channel> 
+    
+</rss>
+
