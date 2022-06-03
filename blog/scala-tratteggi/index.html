@@ -65,14 +65,11 @@
     </nav> -->
   <main>
     
-  
-  <article class="blog-post">
-  
-    <h2>Scala tratteggi</h2>
-  
-  
-      <p>Per avere tratteggi omogenei tra diverse viewport, di diversa scala, su uno stesso layout, ci sono da settare una serie di variabili che, volendo, potete predisporre in un comando da menù:</p>
-<pre> ^C^CMSLTSCALE;1;PSLTSCALE;1;CELTSCALE;1;</pre><p>A questo punto la scala generale dei tratteggi del file è regolata da un'unica variabile LTSCALE e dalla scala di visualizzazione della viewport (model incluso).</p>
+  <article>
+    <h3>Scala tratteggi</h3>
+    <p>Per avere tratteggi omogenei tra diverse viewport, di diversa scala, su uno stesso layout, ci sono da settare una serie di variabili che, volendo, potete predisporre in un comando da menù:</p>
+<pre> ^C^CMSLTSCALE;1;PSLTSCALE;1;CELTSCALE;1;</pre>
+    <p>A questo punto la scala generale dei tratteggi del file è regolata da un'unica variabile LTSCALE e dalla scala di visualizzazione della viewport (model incluso).</p>
 <p><img src="taskbar.png" alt="scala disegno"></p>
 <blockquote><p><strong>MSLTSCALE</strong></p>
 <p>Scales linetypes displayed on the model tab by the annotation scale.</p>
@@ -93,14 +90,10 @@ Type:  Real</p>
 <p>Sets the linetype scaling for new objects relative to the LTSCALE command setting. A line created with CELTSCALE = 2 in a drawing with LTSCALE set to 0.5 would appear the same as a line created with CELTSCALE = 1 in a drawing with LTSCALE = 1.</p>
 </blockquote>
 <div class="admonition admonition-warning"><p>questo approccio impedisce di usare i tipi-linea bidimensionali, quelli che hanno uno "spessore" come <em>batting</em>, <em>zigzag</em> o <em>track</em> in quanto scalerebbero diversamente nelle diverse viste, purtroppo si perde completamente il controllo sull'altezza delle medesime.</p></div>
-  
-  
-  <aside class="meta">
-     2022-05-14
-      </aside>
-  </article>
-  
-
+  </article>  
+<aside class="meta">
+  <p>May 14, 2022</p>
+</aside>
 
   </main>
   <footer>

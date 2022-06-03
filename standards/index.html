@@ -66,44 +66,45 @@
   <main>
     
 
-<nav class="standard">
-  <ul>
-    
-      <li><a href="#spessori-penne">Spessori delle linee</a></li>
+  <nav id="toc" class="standard">
+    <ul>
       
-    
-      <li><a href="#formato-pagina">Formato pagina</a></li>
+        <li><a href="#spessori-penne">Spessori delle linee</a></li>
+        
       
-    
-      <li><a href="#altezza-testi">Altezza testi</a></li>
+        <li><a href="#formato-pagina">Formato pagina</a></li>
+        
       
-    
-      <li><a href="#blocchi">Blocchi</a></li>
+        <li><a href="#altezza-testi">Altezza testi</a></li>
+        
       
-    
-      <li><a href="#scala-disegno">Scala disegno</a></li>
+        <li><a href="#blocchi">Blocchi</a></li>
+        
       
-    
-      <li><a href="#layers">layers</a></li>
+        <li><a href="#scala-disegno">Scala disegno</a></li>
+        
       
-    
-  </ul>
+        <li><a href="#layers">layers</a></li>
+        
+      
+    </ul>
 
 
-</nav>
-
+  </nav>
   <h1>Standards</h1>
   <article><p>Avere degli standard semplifica la produzione: non ricominciate a scegliere i colori delle penne e il font ad ogni progetto! Salvate le impostazioni preferite in un file, rinominatelo *.dwt (drawing template) e partite da quello ad ogni disegno. E se non questo almeno partite da <em>acadiso.dwt</em> e mai da <em>acad.dwt</em>: il primo ha impostazioni metriche e il secondo imperiali.</p>
 <p>Si farà  normalmente riferimento a Norme UNI/CEI, mentre per i layer e i nomi dei file si è preferita l'impostazione pià¹ mnemonica della AEC (UK).</p>
 <p>Le indicazioni relative alla stampa sono fornite considerando di stampare dai layout (spazio carta).</p>
 </article>
-
-
-<article class="chapter" 
-id="spessori-penne"
- >
-  <h2>Spessori delle linee</h2>
-  <p>La norma UNI 3968 - ISO 128 prevede i seguenti spessori per le linee,
+<hr/>
+  
+    <article class="chapter" 
+    id="spessori-penne"
+    >
+<header class="row row-baseline">
+      <h2 class="column">Spessori delle linee</h2><p class="column"><a class="float-right" href="#toc">▲ indice</a></p>
+</header>
+      <p>La norma UNI 3968 - ISO 128 prevede i seguenti spessori per le linee,
 espressi in millimetri :</p>
 <p>0,13  - 0,18 - 0,25 - 0,35 - 0,5 - 0,7 - 1,0 - 1,4 - 1,8 - 2,0</p>
 <div class="admonition admonition-info"><p>si tratta di due serie alternate che raddoppiano (o una che incrementa di √2) - Questo consente di lavorare su riproduzioni raddoppiate/dimezzate con penne omogenee.</p></div><p>da usare così:</p>
@@ -456,13 +457,16 @@ Nel nostro caso sono stati implementati una serie di file stb diversi per divers
 </ul>
 <p>Se ricevete file da fuori, da usare come basi XREF ad esempio, è piuttosto facile calibrarne i layer (conoscendone il ctb, si ordinano per colore e gli si assegna il corretto plotstyle). Non è facile il contrario: se si usa lo stesso colore in layer da diversi <em>plotstyle</em>, convertirlo in <em>ctb</em> è impossibile. Per cui il consiglio è comunque mantenere un criterio di colori anche quando si adottano gli <em>stb</em>.</p>
 
-</article>
-
-<article class="chapter" 
-id="formato-pagina"
- >
-  <h2>Formato pagina</h2>
-  <p>Per il disegno sono indicati i seguenti formati normalizzati UNI 936 -
+    </article>
+    <hr/>
+  
+    <article class="chapter" 
+    id="formato-pagina"
+    >
+<header class="row row-baseline">
+      <h2 class="column">Formato pagina</h2><p class="column"><a class="float-right" href="#toc">▲ indice</a></p>
+</header>
+      <p>Per il disegno sono indicati i seguenti formati normalizzati UNI 936 -
 ISO 5457 della carta in millimetri:</p>
 <table>
 <thead><tr>
@@ -534,13 +538,16 @@ ISO 5457 della carta in millimetri:</p>
 </tbody>
 </table>
 <div class="admonition admonition-info"><p>Per curiosità: il punto di partenza, A0, misura un metro quadro.</p></div>
-</article>
-
-<article class="chapter" 
-id="altezza-testi"
- >
-  <h2>Altezza testi</h2>
-  <p>Sono utilizzabili, secondo le UNI 7559 - ISO 3098, le seguenti altezze,
+    </article>
+    <hr/>
+  
+    <article class="chapter" 
+    id="altezza-testi"
+    >
+<header class="row row-baseline">
+      <h2 class="column">Altezza testi</h2><p class="column"><a class="float-right" href="#toc">▲ indice</a></p>
+</header>
+      <p>Sono utilizzabili, secondo le UNI 7559 - ISO 3098, le seguenti altezze,
 espresse in millimetri :</p>
 <p>2,5   - 3,5   - 5   - 7  -  10</p>
 <p>Se si scrive nello spazio modello andranno pertanto scalati in funzione dell'output di stampa, ad esempio per unità di disegno in cm:</p>
@@ -631,23 +638,29 @@ espresse in millimetri :</p>
 </table>
 <p>sarebbero poi da plottare a 1/10 di spessore (25mm=2.5mm ovvero \"blackXS\" nel stb al 100)). Questo naturalmente ha senso se si usano i font "disegnati" *.shx, usando i normali <em>truetype</em> o altri font di sistema non c'è bisogno perché quelli hanno già il proprio spessore.</p>
 <div class="admonition admonition-tip"><p>consiglio vivamente di preferire i font i <em>truetype</em> agli <em>shp</em>, anche perché nei pdf i primi rimarranno testi mentre i secondi disegni.</p></div><div class="admonition admonition-tip"><p>se il disegno deve circolare tra colleghi non state a caricare font bizzarri, meglio attenersi a quelli che si trovano di default su ogni computer. Quello è un lusso che potrete permettervi se gestite l'intero processo produttivo nel vostro studio.</p></div>
-</article>
-
-<article class="chapter" 
-id="blocchi"
- >
-  <h2>Blocchi</h2>
-  <p>I blocchi semplici (di un solo layer) vanno creati sul layer 0 con tutte le caratteristiche (colore, tipolinea, linewight, plotstyle...) settate a <em>byblock</em>, e poi inseriti nel layer opportuno (es. simboli elettrici nel layer E-ELEC, sanitari in A_SANI) questo semplifica l'accensione/spegnimento dei layer.</p>
+    </article>
+    <hr/>
+  
+    <article class="chapter" 
+    id="blocchi"
+    >
+<header class="row row-baseline">
+      <h2 class="column">Blocchi</h2><p class="column"><a class="float-right" href="#toc">▲ indice</a></p>
+</header>
+      <p>I blocchi semplici (di un solo layer) vanno creati sul layer 0 con tutte le caratteristiche (colore, tipolinea, linewight, plotstyle...) settate a <em>byblock</em>, e poi inseriti nel layer opportuno (es. simboli elettrici nel layer E-ELEC, sanitari in A_SANI) questo semplifica l'accensione/spegnimento dei layer.</p>
 <p>La proprietà BYBLOCK significa che alla singola istanza si possono poi dare caratteristiche diverse che non quelle del layer in cui sono inseriti, ad esempio a un wc si potrebbe forzare lo stile linea tratteggio diversamente dalla proprietà del layer.</p>
 <p>I blocchi più' complessi, che richiedono più layer (es. la camera di un albergo) viceversa vanno creati con i diversi elementi nei layer opportuni e poi inseriti nel layer 0, o uno specificamente creato, non un layer qalunque tipo MURI.</p>
 
-</article>
-
-<article class="chapter" 
-id="scala-disegno"
- >
-  <h2>Scala disegno</h2>
-  <p>Da qualche tempo sono a disposizione quote, testi, blocchi e hatch <em>annotativi</em>. Sono tutti elementi che scalano in base al valore della scala della viewport. Questo semplifica enormemente la produzione di tavole che prevedono diverse scale da uno stesso file. Si possono avere viewport sullo statto layout ma di diversa scala di visualizzazione che facilmente hanno la stessa grafica (seguirà una nota sulla scala dei tratteggi). Potete vedere di seguito la proprietà scala di una viewport (bizzarramente ci viene concesso di usare una scala di visualizzazione e una divesra per le annotazioni)</p>
+    </article>
+    <hr/>
+  
+    <article class="chapter" 
+    id="scala-disegno"
+    >
+<header class="row row-baseline">
+      <h2 class="column">Scala disegno</h2><p class="column"><a class="float-right" href="#toc">▲ indice</a></p>
+</header>
+      <p>Da qualche tempo sono a disposizione quote, testi, blocchi e hatch <em>annotativi</em>. Sono tutti elementi che scalano in base al valore della scala della viewport. Questo semplifica enormemente la produzione di tavole che prevedono diverse scale da uno stesso file. Si possono avere viewport sullo statto layout ma di diversa scala di visualizzazione che facilmente hanno la stessa grafica (seguirà una nota sulla scala dei tratteggi). Potete vedere di seguito la proprietà scala di una viewport (bizzarramente ci viene concesso di usare una scala di visualizzazione e una divesra per le annotazioni)</p>
 <p><img src="scala-disegno/scalaDisegno.jpg" alt="scala disegno"></p>
 <p>La stessa informazione è nella taskbar - quando si lavora nel <em>model space</em> da qui potete rapidamente scegliere la scala delle quote, blocchi e testi annotativi che inserirete o visualizzerete.</p>
 <p><img src="scala-disegno/taskbar.png" alt="scala disegno"></p>
@@ -657,13 +670,16 @@ id="scala-disegno"
 <p>Se non voleste utilizzare la comodità e complessità delle quote annotative, nel preparare gli stili di quota <em>statici</em> da utilizzare a diverse scale, il mio consiglio è di prepararne una che vi piaccia ad una data scala, e poi duplicarla semplicemente <strong>scalandola interamente</strong>, senza dover scalare tutte e ogni proprietà, con l'impostazione <em>use overall scale of</em></p>
 <p><img src="scala-disegno/scaledim.png" alt="dimension scale"></p>
 
-</article>
-
-<article class="chapter" 
-id="layers"
- >
-  <h2>layers</h2>
-  <p>(work in progress)</p>
+    </article>
+    <hr/>
+  
+    <article class="chapter" 
+    id="layers"
+    >
+<header class="row row-baseline">
+      <h2 class="column">layers</h2><p class="column"><a class="float-right" href="#toc">▲ indice</a></p>
+</header>
+      <p>(work in progress)</p>
 <table>
 <thead><tr>
 <th>nome</th>
@@ -696,8 +712,9 @@ id="layers"
 </tbody>
 </table>
 <div class="admonition admonition-warning"><p>*<strong>plotstyle</strong> è presente solo se il file è basato su <em>stb</em> invece di <em>ctb</em> (il file nasce in un modo o nell'altro, ma può essere convertito fra le due modalità).</p></div>
-</article>
-
+    </article>
+    <hr/>
+  
 
   </main>
   <footer>

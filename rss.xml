@@ -1,46 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   
-  <channel>
-  <title>howtoCAD blog</title>
-    <link>https://andrearicci.github.io/howtoCAD/</link>
-    <description>Yet Another CAD (Ctrl Alt Del) Blog</description>
-    <lastBuildDate>Thu, 02 Jun 2022 00:00:00 +0100</lastBuildDate>
-    <atom:link href="https://andrearicci.github.io/howtoCAD/rss.xml" rel="self" type="application/rss+xml" />
+    <channel>
+      <title>howtoCAD blog</title>
+      <link>https://andrearicci.github.io/howtoCAD/</link>
+      <description>Yet Another CAD (Ctrl Alt Del) Blog</description>
+      <lastBuildDate>Thu, 02 Jun 2022 00:00:00 +0100</lastBuildDate>
+      <atom:link href="https://andrearicci.github.io/howtoCAD/" rel="self" type="application/rss+xml" />
+      <image>
+        <url>https://andrearicci.github.io/howtoCAD/assets/static/imgs/harinezumink.png</url>
+        <title>howtoCAD blog</title>
+        <link>https://andrearicci.github.io/howtoCAD/</link>
+        <description>Yet Another CAD (Ctrl Alt Del) Blog</description>
+        <width>88</width>
+        <height>88</height>
+      </image>
          
-            <item>
-              <title>Dialogare</title>
-              <link>https://andrearicci.github.io/howtoCAD/blog/dialogare.html</link>
-              <guid>https://andrearicci.github.io/howtoCAD/blog/dialogare.html</guid>
-              <pubDate>Sat, 14 May 2022 00:00:00 +0100</pubDate>
-              <description></description>
-            </item>
+        <item>
+          <title>Dialogare</title>
+          <link>https://andrearicci.github.io/howtoCAD/blog/dialogare.html</link>
+          <guid>https://andrearicci.github.io/howtoCAD/blog/dialogare.html</guid>
+          <pubDate>Sat, 14 May 2022 00:00:00 +0100</pubDate>
+          <description>Quando date un comando leggete bene tutte le opzioni che questo vi propone, nel prompt dei comandi a piede della finestra o vicino al cursore del mouse, a partire da (quando ci sono) le preferenze del comando.</description>
+        </item>
          
-            <item>
-              <title>PDF/A</title>
-              <link>https://andrearicci.github.io/howtoCAD/blog/pdf-a.html</link>
-              <guid>https://andrearicci.github.io/howtoCAD/blog/pdf-a.html</guid>
-              <pubDate>Sat, 14 May 2022 00:00:00 +0100</pubDate>
-              <description></description>
-            </item>
+        <item>
+          <title>PDF/A</title>
+          <link>https://andrearicci.github.io/howtoCAD/blog/pdf-a.html</link>
+          <guid>https://andrearicci.github.io/howtoCAD/blog/pdf-a.html</guid>
+          <pubDate>Sat, 14 May 2022 00:00:00 +0100</pubDate>
+          <description>In generale evitare sempre le trasparenze nei PDF: creano un sacco di rogne quando si va a plottare.
+Il PDF/A è un formato da &#34;archivio&#34; che garantirebbe la compatibilità del documento sui lunghi periodi e viene spesso richiesto dagli enti pubblici. Pure di questo esistono diversi sottogruppi ma difficlmente glie enti specificano quale. Il più basico esclude le trasparenze.</description>
+        </item>
          
-            <item>
-              <title>Scala tratteggi</title>
-              <link>https://andrearicci.github.io/howtoCAD/blog/scala-tratteggi/</link>
-              <guid>https://andrearicci.github.io/howtoCAD/blog/scala-tratteggi/</guid>
-              <pubDate>Sat, 14 May 2022 00:00:00 +0100</pubDate>
-              <description></description>
-            </item>
+        <item>
+          <title>Scala tratteggi</title>
+          <link>https://andrearicci.github.io/howtoCAD/blog/scala-tratteggi/</link>
+          <guid>https://andrearicci.github.io/howtoCAD/blog/scala-tratteggi/</guid>
+          <pubDate>Sat, 14 May 2022 00:00:00 +0100</pubDate>
+          <description>Per avere tratteggi omogenei tra diverse viewport, di diversa scala, su uno stesso layout, ci sono da settare una serie di variabili che, volendo, potete predisporre in un comando da menù:
+ ^C^CMSLTSCALE;1;PSLTSCALE;1;CELTSCALE;1;</description>
+        </item>
          
-            <item>
-              <title>Unità di misura</title>
-              <link>https://andrearicci.github.io/howtoCAD/blog/unit.html</link>
-              <guid>https://andrearicci.github.io/howtoCAD/blog/unit.html</guid>
-              <pubDate>Sat, 21 May 2022 00:00:00 +0100</pubDate>
-              <description></description>
-            </item>
+        <item>
+          <title>Unità di misura</title>
+          <link>https://andrearicci.github.io/howtoCAD/blog/unit.html</link>
+          <guid>https://andrearicci.github.io/howtoCAD/blog/unit.html</guid>
+          <pubDate>Sat, 21 May 2022 00:00:00 +0100</pubDate>
+          <description>Impostare e unità di misura di un disegno è utilissimo:
+Il disegno è in centimetri? Metri?
+Quando copi qualche pezzo da un disegno all&#39;altro, o lo usi come xref o blocco, se l&#39;unità di misura è diversa, ma memorizzata nel file, il disegno scalerà automaticamente.</description>
+        </item>
        
-  </channel> 
+    </channel> 
     
 </rss>
 
