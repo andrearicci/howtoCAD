@@ -90,6 +90,9 @@ li {
   margin-bottom:0;
 
 }
+summary:hover{
+  cursor:pointer
+}
 p a {
   font-weight: 600;
 }

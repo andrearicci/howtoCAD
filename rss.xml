@@ -6,7 +6,7 @@
       <link>https://andrearicci.github.io/howtoCAD/</link>
       <description>Yet Another CAD (Ctrl Alt Del) Blog</description>
       <lastBuildDate>Thu, 02 Jun 2022 00:00:00 +0100</lastBuildDate>
-      <atom:link href="https://andrearicci.github.io/howtoCAD/" rel="self" type="application/rss+xml" />
+      <atom:link href="https://andrearicci.github.io/howtoCAD/rss.xml" rel="self" type="application/rss+xml" />
       <image>
         <url>https://andrearicci.github.io/howtoCAD/static/imgs/harinezumink.png</url>
         <title>howtoCAD blog</title>
