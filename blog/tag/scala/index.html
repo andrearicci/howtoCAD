@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it">
+<html >
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,12 +7,12 @@
 <!-- <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
 <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
 <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-<link rel="stylesheet" href="../static/normalize.css">
-<link rel="stylesheet" href="../static/skeleton.css"> -->
-<link rel="apple-touch-icon" sizes="180x180" href="../static/favicon_io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../static/favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../static/favicon_io/favicon-16x16.png">
-<link rel="manifest" href="../static/favicon_io/site.webmanifest">
+<link rel="stylesheet" href="../../../static/normalize.css">
+<link rel="stylesheet" href="../../../static/skeleton.css"> -->
+<link rel="apple-touch-icon" sizes="180x180" href="../../../static/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../static/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../static/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="../../../static/favicon_io/site.webmanifest">
 <!-- Google Fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 <!-- CSS Reset -->
@@ -20,18 +20,18 @@
 <!-- Milligram CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 <!-- You should properly set the path from the main file. -->
-<link rel="stylesheet" href="../static/style.css">
-<link rel="stylesheet" href="../static/pygments.css">
-<title>monitorare le variabili — HowtoCAD</title>
+<link rel="stylesheet" href="../../../static/style.css">
+<link rel="stylesheet" href="../../../static/pygments.css">
+<title>Welcome — HowtoCAD</title>
 <link rel="alternate" type="application/rss+xml" title="RSS"
-      href="../static/rss2.xml?h=26e7af93">
+      href="../../../static/rss2.xml?h=26e7af93">
 </head>
-<body  id="sysvarmonitor.html"  class="sysvarmonitor.html  container blog-post">
+<body  id="home"  class="  container ">
 
 <!-- HAmburger responsive menu https://codepen.io/alvarotrigo/pen/MWEJEWG -->
 <nav class="top-nav">
   <div>
-    <h1 class="logo"><a href="../" title="Home">HowtoCAD</a></h1>
+    <h1 class="logo"><a href="../../../" title="Home">HowtoCAD</a></h1>
   </div>
   <input id="menu-toggle" type="checkbox" />
   <label class='menu-button-container' for="menu-toggle">
@@ -39,13 +39,13 @@
 </label>
   <ul class="menu">
     
-      <li  class="active"><a href="./">Blog</a></li>
+      <li  class="active"><a href="../../">Blog</a></li>
     
-      <li ><a href="../standards/">Standards</a></li>
+      <li ><a href="../../../standards/">Standards</a></li>
     
-      <li ><a href="../variables/">Variables</a></li>
+      <li ><a href="../../../variables/">Variables</a></li>
     
-      <li ><a href="../tools/">Tools</a></li>
+      <li ><a href="../../../tools/">Tools</a></li>
     
   </ul>
 </nav>
@@ -55,39 +55,27 @@
 <!--     <nav>
       <ul class="nav navbar-nav row">
         
-          <li class="column  column-10"  class="active"><a href="./">Blog</a></li>
+          <li class="column  column-10"  class="active"><a href="../../">Blog</a></li>
         
-          <li class="column  column-10" ><a href="../variables/">variables</a></li>
+          <li class="column  column-10" ><a href="../../../variables/">variables</a></li>
         
-          <li class="column  column-10" ><a href="../projects">Projects</a></li>
+          <li class="column  column-10" ><a href="../../../projects">Projects</a></li>
         
       </ul>
     </nav> -->
   <main>
     
-  <article>
-    <h3>monitorare le variabili</h3>
-    <p>Ci sono certe <a href="../variables">variabili</a> molto importanti nel quotidiano uso de software (ad esempio vuoi che i bordi degli xref vengano stampati o no?). Da qualche tempo è stato implementato un monitor delle variabili che vi avvisa se qualcosa cambia, e vi da l'opportunità di resettarla al valore da voi preferito. Io lo trovo piuttosto utile.</p>
+<h1>Tag: scala</h1>
+<h2>Posts:</h2>
 
-    <p><a href="https://knowledge.autodesk.com/support/autocad-lt/learn-explore/caas/CloudHelp/cloudhelp/2023/ENU/AutoCAD-LT-DidYouKnow/files/GUID-BE77D014-8D90-45C8-A55E-5609062E3E0F-htm.html?us_oa=akn-us&amp;us_si=3ef3d081-b341-4e3b-b31c-7a4db6bbc6a4&amp;us_st=osnap%20variable">più info qui</a></p>
-<p><img src="sysvarmonitor.html/sysvarmonitor.png" alt="sysvarmonitor"></p>
 
-  </article>  
-<aside class="meta row">
-  <p class="column">May 14, 2022</p>
+<h3><a href="../../scala-tratteggi/">Scala tratteggi</a></h3>
+<p>Per avere tratteggi omogenei tra diverse viewport, di diversa scala, su uno stesso layout, ci sono da settare una serie di variabili che, volendo, potete predisporre in un comando da menù:</p>
+<pre> ^C^CMSLTSCALE;1;PSLTSCALE;1;CELTSCALE;1;</pre>
+<p>[…]</p>
+<hr/>
 
-    
-      <ul class="taglist column">tags: 
-        <li>
-            <a href="tag/variabili/">
-              variabili
-            </a>
-          </li>
-        
-      </ul>
-    
 
-</aside>
 
   </main>
   <footer>
@@ -101,7 +89,7 @@
 
   <li class="column">Built with <a href="https://www.getlektor.com/">Lektor</a>.</li>
 
-   <li class="column"><a href="../rss.xml"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rss" viewBox="0 0 16 16">
+   <li class="column"><a href="../../../rss.xml"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rss" viewBox="0 0 16 16">
     <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
     <path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z"/>
   </svg> RSS blog feed</a>.</li>

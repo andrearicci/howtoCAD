@@ -8,7 +8,7 @@
       <lastBuildDate>Thu, 02 Jun 2022 00:00:00 +0100</lastBuildDate>
       <atom:link href="https://andrearicci.github.io/howtoCAD/" rel="self" type="application/rss+xml" />
       <image>
-        <url>https://andrearicci.github.io/howtoCAD/assets/static/imgs/harinezumink.png</url>
+        <url>https://andrearicci.github.io/howtoCAD/static/imgs/harinezumink.png</url>
         <title>howtoCAD blog</title>
         <link>https://andrearicci.github.io/howtoCAD/</link>
         <description>Yet Another CAD (Ctrl Alt Del) Blog</description>
@@ -22,6 +22,14 @@
           <guid>https://andrearicci.github.io/howtoCAD/blog/dialogare.html</guid>
           <pubDate>Sat, 14 May 2022 00:00:00 +0100</pubDate>
           <description>Quando date un comando leggete bene tutte le opzioni che questo vi propone, nel prompt dei comandi a piede della finestra o vicino al cursore del mouse, a partire da (quando ci sono) le preferenze del comando.</description>
+        </item>
+         
+        <item>
+          <title>monitorare le variabili</title>
+          <link>https://andrearicci.github.io/howtoCAD/blog/sysvarmonitor.html</link>
+          <guid>https://andrearicci.github.io/howtoCAD/blog/sysvarmonitor.html</guid>
+          <pubDate>Sat, 14 May 2022 00:00:00 +0100</pubDate>
+          <description>Ci sono certe variabili molto importanti nel quotidiano uso de software (ad esempio vuoi che i bordi degli xref vengano stampati o no?). Da qualche tempo è stato implementato un monitor delle variabili che vi avvisa se qualcosa cambia, e vi da l&#39;opportunità di resettarla al valore da voi preferito. Io lo trovo piuttosto utile.</description>
         </item>
          
         <item>

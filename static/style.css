@@ -83,6 +83,9 @@ a:active {
 a {
   color: var(--link-color);//#808040
 }
+main a:hover{
+  text-decoration: underline;
+}
 li {
   margin-bottom:0;
 
@@ -104,9 +107,13 @@ header,
 footer,
 div.page {
 }
-meta {
+
+td {padding: .6rem 1.5rem;} // modifica a milligram
+
+.meta p{
   font-size: smaller;
 }
+
 header h1 {
 }
 
@@ -133,6 +140,17 @@ figure.banner {
   counter-increment: chapter;
   font-size: smaller;
 }
+/* elenchi TAG */
+.taglist {
+  list-style: none;
+}
+.taglist li {
+  display: inline-block;
+}
+.taglist a:before{
+  content:"| "
+}
+
 /* sottoemnù del libro degli standard */
 nav.standard {
   display: flex;
