@@ -69,6 +69,7 @@ nav ul {
 footer {
   margin-top: 2rem;
 }
+footer ul {justify-content:space-around;}
 
 a {
 }
@@ -171,6 +172,14 @@ nav.standard a {
 blockquote p{margin-bottom:0;}
 
 code  p:last-of-type {margin-bottom:0;}
+
+.prevnext {text-align: center;}
+.prevnext a:link {
+  margin:1em;
+  text-decoration: none;
+}
+.prevnext a:visited {color: var(--font-color);}
+.prevnext a:hover {color: var(--link-color);}
 
 .admonition p{
   margin-left:2em;
